@@ -1,9 +1,11 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { forwardRef, useState, type ReactNode } from "react";
+import { useForm, Controller } from "react-hook-form";
 import { motion } from "framer-motion";
 import { CheckCircle2, Loader2, ShieldCheck } from "lucide-react";
 import { Dropdown } from "@/components/ui/Dropdown";
+import { BrandCombobox } from "@/components/ui/BrandCombobox";
 
 const VEHICLE_TYPE_OPTIONS = [
   { label: "Select Vehicle Type", value: "" },
@@ -14,21 +16,30 @@ const VEHICLE_TYPE_OPTIONS = [
   { label: "Commercial Vehicles", value: "commercial-vehicles" },
 ];
 
-const COUNTRY_CODE_OPTIONS = [
-  { label: "+91", value: "+91" },
-  { label: "+1", value: "+1" },
-  { label: "+44", value: "+44" },
-  { label: "+971", value: "+971" },
-  { label: "+61", value: "+61" },
-];
+interface QuoteFormValues {
+  name: string;
+  mobile: string;
+  vehicleType: string;
+  registrationNo: string;
+  brand: string;
+}
+
+const INDIA_REG_NO_PATTERN = /^[A-Z]{2}[0-9]{1,2}[A-Z]{1,3}[0-9]{4}$/;
 
 export function QuoteForm({ variant = "glass" }: { variant?: "glass" | "light" }) {
   const [status, setStatus] = useState<"idle" | "submitting" | "success">("idle");
-  const [vehicleType, setVehicleType] = useState("");
-  const [countryCode, setCountryCode] = useState("+91");
+  const {
+    register,
+    handleSubmit,
+    control,
+    reset,
+    formState: { errors },
+  } = useForm<QuoteFormValues>({
+    mode: "onTouched",
+    defaultValues: { name: "", mobile: "", vehicleType: "", registrationNo: "", brand: "" },
+  });
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
-    e.preventDefault();
+  function onSubmit() {
     setStatus("submitting");
     // TODO: replace with POST /api/quote once backend is available
     setTimeout(() => setStatus("success"), 900);
@@ -74,46 +85,106 @@ export function QuoteForm({ variant = "glass" }: { variant?: "glass" | "light" }
           <p className={`text-sm ${isGlass ? "text-ink-300" : "text-ink-500"}`}>
             Our team will call you within 30 minutes with your quote.
           </p>
+          <button
+            type="button"
+            onClick={() => {
+              reset();
+              setStatus("idle");
+            }}
+            className={`mt-3 text-sm font-semibold underline-offset-4 transition-colors hover:underline ${
+              isGlass ? "text-accent-400 hover:text-accent-300" : "text-primary-600 hover:text-primary-700"
+            }`}
+          >
+            Submit Another Request
+          </button>
         </motion.div>
       ) : (
-        <form onSubmit={handleSubmit} className="mt-7 flex flex-col gap-3">
-          <Dropdown
-            theme={theme}
-            name="vehicleType"
-            placeholder="Select Vehicle Type"
-            options={VEHICLE_TYPE_OPTIONS}
-            value={vehicleType}
-            onChange={setVehicleType}
-          />
-          <InputField isGlass={isGlass} placeholder="Enter Vehicle Brand" required />
-          <InputField isGlass={isGlass} placeholder="Enter Model" required />
-          <InputField
-            isGlass={isGlass}
-            placeholder="Enter Registration Year"
-            required
-            inputMode="numeric"
-            pattern="[0-9]{4}"
-            maxLength={4}
-          />
-          <div className="flex gap-3">
-            <Dropdown
-              theme={theme}
-              placeholder="Code"
-              options={COUNTRY_CODE_OPTIONS}
-              value={countryCode}
-              onChange={setCountryCode}
-              className="w-24 shrink-0"
+        <form onSubmit={handleSubmit(onSubmit)} className="mt-7 flex flex-col gap-3" noValidate>
+          <FormField error={errors.name?.message}>
+            <InputField
+              isGlass={isGlass}
+              placeholder="Enter Your Name"
+              hasError={Boolean(errors.name)}
+              {...register("name", { required: "Please enter your name" })}
             />
-            <input
-              type="tel"
-              required
-              placeholder="Enter Mobile Number"
-              inputMode="numeric"
-              pattern="[0-9]{10}"
-              maxLength={10}
-              className={`${inputClasses(isGlass)} flex-1`}
+          </FormField>
+
+          <FormField error={errors.mobile?.message}>
+            <div className="flex gap-3">
+              <span
+                className={`flex h-12 w-16 shrink-0 items-center justify-center rounded-xl border text-sm font-medium ${
+                  isGlass
+                    ? "border-white/10 bg-white/5 text-white"
+                    : "border-ink-200 bg-white text-ink-900"
+                }`}
+              >
+                +91
+              </span>
+              <InputField
+                isGlass={isGlass}
+                className="flex-1"
+                type="tel"
+                placeholder="Enter Mobile Number"
+                inputMode="numeric"
+                maxLength={10}
+                hasError={Boolean(errors.mobile)}
+                {...register("mobile", {
+                  required: "Please enter your mobile number",
+                  pattern: { value: /^[0-9]{10}$/, message: "Enter a valid 10-digit mobile number" },
+                })}
+              />
+            </div>
+          </FormField>
+
+          <FormField error={errors.vehicleType?.message}>
+            <Controller
+              name="vehicleType"
+              control={control}
+              rules={{ required: "Please select a vehicle type" }}
+              render={({ field }) => (
+                <Dropdown
+                  theme={theme}
+                  placeholder="Select Vehicle Type"
+                  options={VEHICLE_TYPE_OPTIONS}
+                  value={field.value}
+                  onChange={field.onChange}
+                  hasError={Boolean(errors.vehicleType)}
+                />
+              )}
             />
-          </div>
+          </FormField>
+
+          <FormField error={errors.registrationNo?.message} hint="Must be a valid Indian registration number, e.g. MH12AB1234">
+            <InputField
+              isGlass={isGlass}
+              placeholder="Enter Registration Number"
+              className="uppercase placeholder:normal-case"
+              hasError={Boolean(errors.registrationNo)}
+              {...register("registrationNo", {
+                required: "Please enter the vehicle registration number",
+                pattern: { value: INDIA_REG_NO_PATTERN, message: "Enter a valid Indian registration number, e.g. MH12AB1234" },
+                setValueAs: (v: string) => v.toUpperCase(),
+              })}
+            />
+          </FormField>
+
+          <FormField error={errors.brand?.message}>
+            <Controller
+              name="brand"
+              control={control}
+              rules={{ required: "Please select or enter the vehicle brand" }}
+              render={({ field }) => (
+                <BrandCombobox
+                  theme={theme}
+                  value={field.value}
+                  onChange={field.onChange}
+                  onBlur={field.onBlur}
+                  hasError={Boolean(errors.brand)}
+                />
+              )}
+            />
+          </FormField>
+
           <button
             type="submit"
             disabled={status === "submitting"}
@@ -131,7 +202,12 @@ export function QuoteForm({ variant = "glass" }: { variant?: "glass" | "light" }
   );
 }
 
-function inputClasses(isGlass: boolean) {
+function inputClasses(isGlass: boolean, hasError: boolean) {
+  if (hasError) {
+    return `h-12 w-full rounded-xl border px-4 text-sm outline-none transition-colors border-amber-500 focus:border-amber-500 ${
+      isGlass ? "bg-white/5 text-white placeholder:text-ink-400" : "bg-white text-ink-900 placeholder:text-ink-400"
+    }`;
+  }
   return `h-12 w-full rounded-xl border px-4 text-sm outline-none transition-colors ${
     isGlass
       ? "border-white/10 bg-white/5 text-white placeholder:text-ink-400 focus:border-accent-500"
@@ -139,10 +215,30 @@ function inputClasses(isGlass: boolean) {
   }`;
 }
 
-function InputField({
-  isGlass,
-  className = "",
-  ...props
-}: { isGlass: boolean; className?: string } & React.InputHTMLAttributes<HTMLInputElement>) {
-  return <input {...props} className={`${inputClasses(isGlass)} ${className}`} />;
+const InputField = forwardRef<
+  HTMLInputElement,
+  { isGlass: boolean; className?: string; hasError?: boolean } & React.InputHTMLAttributes<HTMLInputElement>
+>(function InputField({ isGlass, className = "", hasError = false, ...props }, ref) {
+  return <input ref={ref} {...props} className={`${inputClasses(isGlass, hasError)} ${className}`} />;
+});
+
+function FormField({
+  error,
+  hint,
+  children,
+}: {
+  error?: string;
+  hint?: string;
+  children: ReactNode;
+}) {
+  return (
+    <div>
+      {children}
+      {error ? (
+        <p className="mt-1.5 pl-1 text-xs font-medium text-amber-600">{error}</p>
+      ) : hint ? (
+        <p className="mt-1.5 pl-1 text-xs text-ink-400">{hint}</p>
+      ) : null}
+    </div>
+  );
 }

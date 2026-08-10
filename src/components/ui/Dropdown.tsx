@@ -18,6 +18,7 @@ export function Dropdown({
   theme = "dark",
   className,
   name,
+  hasError = false,
 }: {
   options: DropdownOption[];
   value: string;
@@ -26,6 +27,7 @@ export function Dropdown({
   theme?: "dark" | "light";
   className?: string;
   name?: string;
+  hasError?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -51,9 +53,13 @@ export function Dropdown({
         aria-expanded={open}
         className={cn(
           "flex h-12 w-full items-center justify-between gap-2 rounded-xl border px-4 text-left text-sm outline-none transition-colors",
-          isDark
-            ? "border-white/10 bg-white/5 text-white focus:border-accent-500"
-            : "border-ink-200 bg-white text-ink-900 focus:border-primary-500"
+          hasError
+            ? "border-amber-500 focus:border-amber-500"
+            : isDark
+              ? "border-white/10 bg-white/5 text-white focus:border-accent-500"
+              : "border-ink-200 bg-white text-ink-900 focus:border-primary-500",
+          hasError && isDark && "bg-white/5 text-white",
+          hasError && !isDark && "bg-white text-ink-900"
         )}
       >
         <span className={cn("truncate", !hasValue && "text-ink-400")}>
@@ -76,7 +82,7 @@ export function Dropdown({
             exit={{ opacity: 0, y: -6, scale: 0.98 }}
             transition={{ duration: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className={cn(
-              "absolute left-0 right-0 top-full z-30 mt-2 max-h-60 overflow-auto rounded-xl border p-1.5 shadow-[var(--shadow-premium-lg)]",
+              "thin-scrollbar absolute left-0 right-0 top-full z-30 mt-2 max-h-60 overflow-auto overscroll-contain rounded-xl border p-1.5 shadow-[var(--shadow-premium-lg)]",
               isDark ? "border-white/10 bg-ink-900" : "border-border bg-white"
             )}
           >

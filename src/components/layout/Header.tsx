@@ -53,7 +53,12 @@ export function Header() {
                   )}
                 >
                   {item.label}
-                  <span className="pointer-events-none absolute bottom-1.5 left-4 right-4 h-[2px] origin-left scale-x-0 rounded-full bg-primary-600 transition-transform duration-300 ease-[var(--ease-premium)] group-hover:scale-x-100" />
+                  <span
+                    className={cn(
+                      "pointer-events-none absolute bottom-1.5 left-4 right-4 h-[2px] origin-left rounded-full bg-primary-600 transition-transform duration-300 ease-[var(--ease-premium)] group-hover:scale-x-100",
+                      active ? "scale-x-100" : "scale-x-0"
+                    )}
+                  />
                 </Link>
               );
             })}
@@ -62,7 +67,7 @@ export function Header() {
           <div className="hidden items-center gap-3 lg:flex">
             <a
               href={`tel:${SITE_CONFIG.contact.phoneRaw}`}
-              className="flex h-11 w-11 items-center justify-center rounded-full border border-ink-200 text-ink-700 transition-colors hover:border-primary-600 hover:text-primary-700"
+              className="flex h-11 w-11 items-center justify-center rounded-full border border-[#483d3e] text-ink-700 transition-colors hover:border-primary-600 hover:text-primary-700"
               aria-label="Call us"
             >
               <Phone className="h-[18px] w-[18px]" />

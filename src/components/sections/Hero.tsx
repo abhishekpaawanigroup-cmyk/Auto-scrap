@@ -8,9 +8,9 @@ import { Container } from "@/components/ui/Container";
 import { QuoteForm } from "@/components/sections/QuoteForm";
 
 const benefits = [
-  { icon: Truck, label: "Free Pickup At Your Location" },
-  { icon: Wallet, label: "Instant Digital Payment" },
-  { icon: ShieldCheck, label: "Government Authorized" },
+  { icon: Truck, label: "Same Day Pickup" },
+  { icon: Wallet, label: "Instant Payment" },
+  { icon: ShieldCheck, label: "RVSF Certified" },
 ];
 
 export function Hero() {
@@ -26,7 +26,7 @@ export function Hero() {
       {/* Dark wash: solid on the left for text legibility, fading out over the photo on the right */}
       <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/30 sm:via-ink-950/80 sm:to-ink-950/25" aria-hidden />
       <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/40" aria-hidden />
-      <div className="absolute inset-0 bg-grid opacity-[0.04]" aria-hidden />
+      <div className="absolute inset-0 bg-grid opacity-[0.01]" aria-hidden />
       
 
       <Container className="relative z-10 grid grid-cols-1 gap-16 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:py-28">
@@ -104,7 +104,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 24, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            // className="animate-float"
+            className="w-full max-w-md"
           >
             <QuoteForm variant="glass" />
           </motion.div>

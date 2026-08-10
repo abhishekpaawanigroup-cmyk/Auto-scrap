@@ -10,7 +10,6 @@ import { ProcessGallery } from "@/components/sections/ProcessGallery";
 import { EnvironmentalImpact } from "@/components/sections/EnvironmentalImpact";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { LatestBlogs } from "@/components/sections/LatestBlogs";
 import { PartnersSlider } from "@/components/sections/PartnersSlider";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
@@ -41,7 +40,6 @@ export default function Home() {
       <EnvironmentalImpact />
       <TestimonialsSection />
       <FAQSection />
-      <LatestBlogs />
       <PartnersSlider />
       <CTABanner />
     </>
