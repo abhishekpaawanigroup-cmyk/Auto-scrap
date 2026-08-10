@@ -1,0 +1,122 @@
+[
+  {
+    "id": "s1",
+    "slug": "vehicle-scrapping",
+    "title": "Vehicle Scrapping",
+    "shortDescription": "End-to-end scrapping for all vehicle types, compliant with government norms.",
+    "description": "Our core service covers the complete scrapping lifecycle — from inspection and valuation to certified dismantling. Every vehicle is processed at our government-authorized facility using standardized recovery protocols that maximize material reclamation while meeting environmental compliance requirements.",
+    "icon": "Car",
+    "image": "/images/services/scrapping.svg",
+    "benefits": [
+      "Government-authorized dismantling facility",
+      "Transparent, real-time valuation",
+      "Complete documentation handling",
+      "Certificate of destruction provided"
+    ]
+  },
+  {
+    "id": "s2",
+    "slug": "rc-cancellation",
+    "title": "RC Cancellation",
+    "shortDescription": "We manage full RTO documentation to cancel your vehicle registration.",
+    "description": "Cancelling a Registration Certificate can be a bureaucratic maze. Our documentation specialists handle every RTO interaction on your behalf, ensuring your vehicle is legally deregistered and you're protected from future liability, fines, or challans tied to the old registration.",
+    "icon": "FileCheck2",
+    "image": "/images/services/rc-cancellation.svg",
+    "benefits": [
+      "Complete RTO liaison",
+      "Legal liability protection",
+      "Digital tracking of application",
+      "Fast-tracked processing"
+    ]
+  },
+  {
+    "id": "s3",
+    "slug": "pollution-certificate",
+    "title": "Pollution Certificate",
+    "shortDescription": "Assistance in acquiring and closing pollution clearance records.",
+    "description": "We assist owners in resolving outstanding Pollution Under Control certificate records as part of the scrapping process, ensuring your vehicle's environmental compliance history is properly closed out alongside its deregistration.",
+    "icon": "Leaf",
+    "image": "/images/services/pollution.svg",
+    "benefits": [
+      "Compliance record closure",
+      "Environmental audit support",
+      "No hidden charges",
+      "Fast turnaround"
+    ]
+  },
+  {
+    "id": "s4",
+    "slug": "insurance-assistance",
+    "title": "Insurance Assistance",
+    "shortDescription": "Guidance on cancelling policies and claiming applicable refunds.",
+    "description": "Our advisors help you navigate insurance policy cancellation once your vehicle is scrapped, including guidance on pro-rata refund eligibility and the paperwork insurers require to process it.",
+    "icon": "ShieldCheck",
+    "image": "/images/services/insurance.svg",
+    "benefits": [
+      "Policy cancellation guidance",
+      "Refund eligibility check",
+      "Document preparation support",
+      "Dedicated advisor"
+    ]
+  },
+  {
+    "id": "s5",
+    "slug": "buy-back-service",
+    "title": "Buy Back Service",
+    "shortDescription": "We purchase old vehicles in any condition at fair market value.",
+    "description": "Whether your vehicle runs or not, our buy-back program offers a straightforward path to converting it into cash. We evaluate based on transparent, weight and material-based pricing models — no negotiation games.",
+    "icon": "HandCoins",
+    "image": "/images/services/buyback.svg",
+    "benefits": [
+      "Any condition accepted",
+      "Transparent pricing model",
+      "Instant digital payment",
+      "No hidden deductions"
+    ]
+  },
+  {
+    "id": "s6",
+    "slug": "corporate-fleet-disposal",
+    "title": "Corporate Fleet Disposal",
+    "shortDescription": "Structured, compliant disposal programs for enterprise vehicle fleets.",
+    "description": "We partner with corporates and government departments to manage large-scale fleet decommissioning — coordinating logistics, batch documentation, and reporting across multiple vehicles and locations simultaneously.",
+    "icon": "Building2",
+    "image": "/images/services/fleet.svg",
+    "benefits": [
+      "Dedicated account manager",
+      "Batch documentation",
+      "Multi-location coordination",
+      "Consolidated compliance reporting"
+    ]
+  },
+  {
+    "id": "s7",
+    "slug": "commercial-vehicle-scrapping",
+    "title": "Commercial Vehicle Scrapping",
+    "shortDescription": "Specialized dismantling for trucks, buses and heavy vehicles.",
+    "description": "Commercial vehicles require specialized equipment and higher-capacity dismantling lines. We handle trucks, buses, and heavy transport vehicles with the infrastructure needed to process them safely and efficiently.",
+    "icon": "Truck",
+    "image": "/images/services/commercial.svg",
+    "benefits": [
+      "Heavy-vehicle capable facility",
+      "On-site inspection available",
+      "Compliance certification",
+      "Priority scheduling for fleets"
+    ]
+  },
+  {
+    "id": "s8",
+    "slug": "auction-assistance",
+    "title": "Auction Assistance",
+    "shortDescription": "Support for institutions liquidating vehicles through auction routes.",
+    "description": "For government bodies and institutions required to dispose of vehicles via auction, we provide end-to-end support — from valuation benchmarking to post-auction scrapping and documentation for the winning process.",
+    "icon": "Gavel",
+    "image": "/images/services/auction.svg",
+    "benefits": [
+      "Valuation benchmarking",
+      "Institutional compliance",
+      "Post-auction processing",
+      "Full audit trail"
+    ]
+  }
+]

@@ -1,0 +1,6 @@
+[
+  { "id": "e1", "label": "Trees Saved", "value": 42000, "suffix": "+", "percentage": 82, "icon": "TreePine" },
+  { "id": "e2", "label": "Steel Recycled (Tons)", "value": 68000, "suffix": "+", "percentage": 94, "icon": "Boxes" },
+  { "id": "e3", "label": "Plastic Recycled (Tons)", "value": 9600, "suffix": "+", "percentage": 76, "icon": "Recycle" },
+  { "id": "e4", "label": "CO₂ Reduction (Tons)", "value": 8500, "suffix": "+", "percentage": 88, "icon": "Leaf" }
+]

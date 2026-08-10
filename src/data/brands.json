@@ -1,0 +1,16 @@
+[
+  { "id": "b1", "name": "Maruti Suzuki", "logo": "/images/brands/maruti.svg" },
+  { "id": "b2", "name": "Hyundai", "logo": "/images/brands/hyundai.svg" },
+  { "id": "b3", "name": "Honda", "logo": "/images/brands/honda.svg" },
+  { "id": "b4", "name": "Mahindra", "logo": "/images/brands/mahindra.svg" },
+  { "id": "b5", "name": "Toyota", "logo": "/images/brands/toyota.svg" },
+  { "id": "b6", "name": "Tata Motors", "logo": "/images/brands/tata.svg" },
+  { "id": "b7", "name": "BMW", "logo": "/images/brands/bmw.svg" },
+  { "id": "b8", "name": "Mercedes-Benz", "logo": "/images/brands/mercedes.svg" },
+  { "id": "b9", "name": "Audi", "logo": "/images/brands/audi.svg" },
+  { "id": "b10", "name": "Kia", "logo": "/images/brands/kia.svg" },
+  { "id": "b11", "name": "MG Motor", "logo": "/images/brands/mg.svg" },
+  { "id": "b12", "name": "Nissan", "logo": "/images/brands/nissan.svg" },
+  { "id": "b13", "name": "Skoda", "logo": "/images/brands/skoda.svg" },
+  { "id": "b14", "name": "Volkswagen", "logo": "/images/brands/volkswagen.svg" }
+]

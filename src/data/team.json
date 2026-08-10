@@ -1,0 +1,6 @@
+[
+  { "id": "tm1", "name": "Rajesh Khanna", "role": "Founder & CEO", "image": "/images/team/rajesh.svg", "bio": "20+ years in industrial recycling and circular economy policy." },
+  { "id": "tm2", "name": "Meera Iyer", "role": "Chief Operations Officer", "image": "/images/team/meera.svg", "bio": "Oversees pan-India pickup logistics and facility operations." },
+  { "id": "tm3", "name": "Aditya Rao", "role": "Head of Compliance", "image": "/images/team/aditya.svg", "bio": "Ensures every vehicle is processed to RVSF regulatory standard." },
+  { "id": "tm4", "name": "Kavya Menon", "role": "Head of Customer Experience", "image": "/images/team/kavya.svg", "bio": "Leads the team that makes every customer's scrapping journey seamless." }
+]

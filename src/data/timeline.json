@@ -1,0 +1,8 @@
+[
+  { "id": "tl1", "year": "2013", "title": "Company Founded", "description": "Started as a small dismantling yard on the outskirts of Delhi with a single facility." },
+  { "id": "tl2", "year": "2016", "title": "RVSF Authorization", "description": "Became one of the first government-authorized vehicle scrapping facilities in North India." },
+  { "id": "tl3", "year": "2019", "title": "Digital Valuation Launch", "description": "Introduced instant online quote technology, cutting valuation time from days to minutes." },
+  { "id": "tl4", "year": "2021", "title": "Pan-India Expansion", "description": "Scaled pickup operations to over 60 cities through a certified partner network." },
+  { "id": "tl5", "year": "2023", "title": "Corporate Fleet Division", "description": "Launched a dedicated division serving enterprise and government fleet disposal." },
+  { "id": "tl6", "year": "2025", "title": "100+ Cities Milestone", "description": "Crossed 15,000 vehicles processed and 100+ cities under active service coverage." }
+]

@@ -1,0 +1,8 @@
+[
+  { "id": "p1", "name": "MoRTH Certified", "logo": "/images/partners/morth.svg" },
+  { "id": "p2", "name": "ISO 14001", "logo": "/images/partners/iso14001.svg" },
+  { "id": "p3", "name": "RVSF Network", "logo": "/images/partners/rvsf.svg" },
+  { "id": "p4", "name": "Green India Alliance", "logo": "/images/partners/green-india.svg" },
+  { "id": "p5", "name": "CPCB Registered", "logo": "/images/partners/cpcb.svg" },
+  { "id": "p6", "name": "Skill India Partner", "logo": "/images/partners/skill-india.svg" }
+]

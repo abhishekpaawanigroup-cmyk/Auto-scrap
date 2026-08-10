@@ -1,0 +1,7 @@
+[
+  { "id": "st1", "label": "Vehicles Scrapped", "value": 15000, "suffix": "+", "icon": "Car" },
+  { "id": "st2", "label": "Happy Customers", "value": 10000, "suffix": "+", "icon": "Users" },
+  { "id": "st3", "label": "Cities Covered", "value": 100, "suffix": "+", "icon": "MapPin" },
+  { "id": "st4", "label": "Years Experience", "value": 12, "suffix": "+", "icon": "Award" },
+  { "id": "st5", "label": "CO₂ Saved (Tons)", "value": 8500, "suffix": "+", "icon": "Leaf" }
+]

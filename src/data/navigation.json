@@ -1,0 +1,28 @@
+{
+  "mainNav": [
+    { "label": "Home", "href": "/" },
+    { "label": "About", "href": "/about" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "Contact Us", "href": "/contact" }
+  ],
+  "footerQuickLinks": [
+    { "label": "Home", "href": "/" },
+    { "label": "About Us", "href": "/about" },
+    { "label": "Services", "href": "/services" },
+    { "label": "Vehicle Types", "href": "/vehicle-types" },
+    { "label": "How It Works", "href": "/how-it-works" },
+    { "label": "Blog", "href": "/blog" },
+    { "label": "Contact Us", "href": "/contact" }
+  ],
+  "footerServices": [
+    { "label": "Vehicle Scrapping", "href": "/services/vehicle-scrapping" },
+    { "label": "RC Cancellation", "href": "/services/rc-cancellation" },
+    { "label": "Pollution Certificate", "href": "/services/pollution-certificate" },
+    { "label": "Buy Back Service", "href": "/services/buy-back-service" },
+    { "label": "Insurance Assistance", "href": "/services/insurance-assistance" }
+  ],
+  "legalLinks": [
+    { "label": "Privacy Policy", "href": "/privacy-policy" },
+    { "label": "Terms & Conditions", "href": "/terms-and-conditions" }
+  ]
+}

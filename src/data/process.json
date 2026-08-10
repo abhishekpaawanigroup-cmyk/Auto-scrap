@@ -1,0 +1,44 @@
+[
+  {
+    "id": "p1",
+    "step": 1,
+    "title": "Request Quote",
+    "description": "Share your vehicle details online or by phone and receive a transparent, no-obligation valuation within minutes.",
+    "icon": "ClipboardList"
+  },
+  {
+    "id": "p2",
+    "step": 2,
+    "title": "Vehicle Inspection",
+    "description": "Our certified inspector assesses your vehicle's condition to confirm final pricing at your location.",
+    "icon": "Search"
+  },
+  {
+    "id": "p3",
+    "step": 3,
+    "title": "Free Pickup",
+    "description": "We schedule a doorstep pickup at a time that works for you — anywhere across our service network.",
+    "icon": "Truck"
+  },
+  {
+    "id": "p4",
+    "step": 4,
+    "title": "Instant Payment",
+    "description": "Receive full payment digitally the moment your vehicle is collected. No delays, no follow-ups.",
+    "icon": "Wallet"
+  },
+  {
+    "id": "p5",
+    "step": 5,
+    "title": "RC Cancellation",
+    "description": "We manage the complete RTO deregistration process so you're fully protected from future liability.",
+    "icon": "FileCheck2"
+  },
+  {
+    "id": "p6",
+    "step": 6,
+    "title": "Eco Recycling",
+    "description": "Your vehicle is dismantled and recycled at our certified facility, recovering up to 95% of materials.",
+    "icon": "Recycle"
+  }
+]

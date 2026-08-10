@@ -1,0 +1,10 @@
+[
+  { "id": "w1", "title": "Government Authorized", "description": "Fully licensed RVSF facility compliant with MoRTH vehicle scrappage regulations.", "icon": "ShieldCheck" },
+  { "id": "w2", "title": "Best Market Price", "description": "Transparent, weight-based valuation with no last-minute deductions at pickup.", "icon": "TrendingUp" },
+  { "id": "w3", "title": "Instant Payment", "description": "Full payment transferred digitally the moment your vehicle is collected.", "icon": "Wallet" },
+  { "id": "w4", "title": "Doorstep Pickup", "description": "Free vehicle collection scheduled at your convenience, in over 100 cities.", "icon": "Truck" },
+  { "id": "w5", "title": "RC Assistance", "description": "Complete RTO deregistration handled on your behalf, start to finish.", "icon": "FileCheck2" },
+  { "id": "w6", "title": "Eco-Friendly Recycling", "description": "Certified dismantling recovers up to 95% of materials responsibly.", "icon": "Recycle" },
+  { "id": "w7", "title": "100% Transparent", "description": "Real-time tracking and documented pricing at every stage of the process.", "icon": "Eye" },
+  { "id": "w8", "title": "Pan-India Network", "description": "A growing network of certified facilities and pickup partners nationwide.", "icon": "Globe2" }
+]

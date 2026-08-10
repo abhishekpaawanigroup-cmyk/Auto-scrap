@@ -1,0 +1,11 @@
+<svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ag-53187070" x1="0" y1="0" x2="320" y2="320" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1e293b"/>
+      <stop offset="1" stop-color="#0e7a43"/>
+    </linearGradient>
+  </defs>
+  <circle cx="160" cy="160" r="160" fill="url(#ag-53187070)"/>
+  <circle cx="160" cy="160" r="156" fill="none" stroke="#ffffff" stroke-opacity="0.15" stroke-width="2"/>
+  <text x="50%" y="53%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="109" fill="#ffffff" font-weight="700">AM</text>
+</svg>

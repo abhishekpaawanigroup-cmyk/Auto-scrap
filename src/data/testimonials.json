@@ -1,0 +1,56 @@
+[
+  {
+    "id": "t1",
+    "name": "Rohit Sharma",
+    "location": "Delhi",
+    "rating": 5,
+    "review": "The entire process felt refreshingly professional — from the video valuation call to pickup, everything was on time and the payment hit my account before the driver even left.",
+    "image": "/images/testimonials/rohit.svg",
+    "vehicle": "Honda City, 2011"
+  },
+  {
+    "id": "t2",
+    "name": "Anjali Mehta",
+    "location": "Mumbai",
+    "rating": 5,
+    "review": "I was dreading the RC cancellation paperwork more than losing the car. Their team handled the entire RTO process and sent me the closure certificate within two weeks.",
+    "image": "/images/testimonials/anjali.svg",
+    "vehicle": "Maruti Swift, 2009"
+  },
+  {
+    "id": "t3",
+    "name": "Vikram Singh",
+    "location": "Bangalore",
+    "rating": 5,
+    "review": "Got a noticeably better quote than two other scrap dealers I called. Transparent pricing, no last-minute deductions at pickup — exactly what they quoted is what I received.",
+    "image": "/images/testimonials/vikram.svg",
+    "vehicle": "Toyota Innova, 2008"
+  },
+  {
+    "id": "t4",
+    "name": "Priya Nair",
+    "location": "Chennai",
+    "rating": 5,
+    "review": "Our office had six old fleet vehicles to dispose of. Their corporate team coordinated pickup across two locations and gave us a single consolidated compliance report.",
+    "image": "/images/testimonials/priya.svg",
+    "vehicle": "Fleet — 6 Vehicles"
+  },
+  {
+    "id": "t5",
+    "name": "Arjun Kapoor",
+    "location": "Pune",
+    "rating": 4,
+    "review": "Smooth experience overall. Inspection was quick and the pickup team was courteous. Would have liked slightly faster scheduling, but the payment and paperwork were flawless.",
+    "image": "/images/testimonials/arjun.svg",
+    "vehicle": "Hyundai i20, 2010"
+  },
+  {
+    "id": "t6",
+    "name": "Sneha Reddy",
+    "location": "Hyderabad",
+    "rating": 5,
+    "review": "Loved that they explained exactly where the materials go and how much CO₂ gets offset. Felt good knowing my old scooter wasn't just dumped somewhere.",
+    "image": "/images/testimonials/sneha.svg",
+    "vehicle": "TVS Scooty, 2013"
+  }
+]

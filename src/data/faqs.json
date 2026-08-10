@@ -1,0 +1,50 @@
+[
+  {
+    "id": "f1",
+    "question": "Is your vehicle scrapping facility government-authorized?",
+    "answer": "Yes. We operate as a Registered Vehicle Scrapping Facility (RVSF) under the Ministry of Road Transport and Highways guidelines, fully licensed to issue Certificates of Vehicle Scrapping (CVS) for end-of-life vehicles.",
+    "category": "General"
+  },
+  {
+    "id": "f2",
+    "question": "How is the scrap value of my vehicle calculated?",
+    "answer": "Valuation is based on the vehicle's weight, make, model, age, and recoverable material composition — primarily steel, aluminium, and other metals. We provide a transparent breakdown before you accept any offer.",
+    "category": "Pricing"
+  },
+  {
+    "id": "f3",
+    "question": "Do you offer free pickup across all cities?",
+    "answer": "We offer free doorstep pickup in over 100 cities across India. If your city isn't listed at checkout, contact our support team — we regularly expand our service network.",
+    "category": "Pickup"
+  },
+  {
+    "id": "f4",
+    "question": "How long does RC cancellation take after pickup?",
+    "answer": "On average, RC cancellation is completed within 15–20 working days of vehicle pickup, depending on your state RTO's processing timelines. We keep you updated at every stage.",
+    "category": "Documentation"
+  },
+  {
+    "id": "f5",
+    "question": "What documents do I need to scrap my vehicle?",
+    "answer": "You'll need the original RC, a valid ID proof, and the vehicle's PUC certificate if available. Our team will guide you through any additional state-specific requirements during the quote process.",
+    "category": "Documentation"
+  },
+  {
+    "id": "f6",
+    "question": "When do I receive payment for my vehicle?",
+    "answer": "Payment is transferred digitally at the moment of pickup, directly to your registered bank account — there is no waiting period after your vehicle leaves your location.",
+    "category": "Pricing"
+  },
+  {
+    "id": "f7",
+    "question": "Can I scrap a vehicle that doesn't run or has been in an accident?",
+    "answer": "Absolutely. We accept vehicles in any condition, including non-running, accident-damaged, or flood-affected vehicles. Our buy-back program values these based on recoverable material weight.",
+    "category": "General"
+  },
+  {
+    "id": "f8",
+    "question": "Do you provide services for corporate or fleet vehicles?",
+    "answer": "Yes, we run a dedicated Corporate Fleet Disposal program for businesses and institutions needing to decommission multiple vehicles, with consolidated billing and compliance reporting.",
+    "category": "Corporate"
+  }
+]

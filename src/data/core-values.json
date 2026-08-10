@@ -1,0 +1,6 @@
+[
+  { "id": "cv1", "title": "Integrity", "description": "Transparent pricing and honest documentation at every stage — no hidden deductions, ever.", "icon": "ShieldCheck" },
+  { "id": "cv2", "title": "Sustainability", "description": "Every decision is measured against its environmental impact, not just commercial gain.", "icon": "Leaf" },
+  { "id": "cv3", "title": "Precision", "description": "Standardized inspection and dismantling protocols applied consistently across every facility.", "icon": "Search" },
+  { "id": "cv4", "title": "Accountability", "description": "Full documentation trail from pickup to certificate — you're covered at every step.", "icon": "FileCheck2" }
+]

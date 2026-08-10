@@ -1,0 +1,10 @@
+[
+  { "id": "g1", "title": "Inspection Bay", "image": "/images/scrap/scrap1.png", "category": "Inspection" },
+  { "id": "g2", "title": "Doorstep Pickup", "image": "/images/scrap/scrap2.png", "category": "Pickup" },
+  { "id": "g3", "title": "Dismantling Line", "image": "/images/scrap/scrap3.png", "category": "Dismantling" },
+  { "id": "g4", "title": "Metal Shredding", "image": "/images/scrap/scrap4.png", "category": "Recycling" },
+  { "id": "g5", "title": "Steel Recovery", "image": "/images/scrap/scrap5.png", "category": "Recycling" },
+  { "id": "g6", "title": "Certified Facility", "image": "/images/scrap/scrap6.png", "category": "Facility" },
+  { "id": "g7", "title": "Fleet Processing", "image": "/images/scrap/scrap7.png", "category": "Dismantling" },
+  { "id": "g8", "title": "Documentation Desk", "image": "/images/scrap/scrap8.png", "category": "Inspection" }
+]
