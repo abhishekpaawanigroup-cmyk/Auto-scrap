@@ -1,9 +1,11 @@
 "use client";
 
+import { useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Pagination } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/pagination";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
 import { TestimonialCard } from "@/components/cards/TestimonialCard";
@@ -11,41 +13,63 @@ import testimonials from "@/data/testimonials.json";
 import type { Testimonial } from "@/types";
 
 export function TestimonialsSection() {
+  const swiperRef = useRef<SwiperType | null>(null);
+
   return (
     <section className="bg-surface py-20 sm:py-28">
       <Container>
-        <SectionTitle
-          eyebrow="Customer Stories"
-          title="What Our Customers Say"
-          description="Real experiences from vehicle owners who chose a transparent, certified scrapping process."
-        />
+        <div className="flex flex-wrap items-end justify-between gap-6">
+          <SectionTitle
+            eyebrow="Customer Stories"
+            title="What Our Customers Say"
+            description="Real experiences from vehicle owners who chose a transparent, certified scrapping process."
+            align="left"
+            className="max-w-2xl"
+          />
+          <div className="flex gap-3">
+            <button
+              type="button"
+              aria-label="Previous testimonials"
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="group flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-ink-500 shadow-[var(--shadow-premium)] transition-colors hover:border-primary-600 hover:bg-primary-600 hover:text-white"
+            >
+              <ChevronLeft className="h-5 w-5" />
+            </button>
+            <button
+              type="button"
+              aria-label="Next testimonials"
+              onClick={() => swiperRef.current?.slideNext()}
+              className="group flex h-11 w-11 items-center justify-center rounded-full border border-border bg-white text-ink-500 shadow-[var(--shadow-premium)] transition-colors hover:border-primary-600 hover:bg-primary-600 hover:text-white"
+            >
+              <ChevronRight className="h-5 w-5" />
+            </button>
+          </div>
+        </div>
       </Container>
       <Container className="mt-14">
         <Swiper
-          modules={[Autoplay, Pagination]}
+          modules={[Autoplay]}
+          onSwiper={(swiper) => {
+            swiperRef.current = swiper;
+          }}
           slidesPerView={1}
           spaceBetween={24}
           loop
-          autoplay={{ delay: 4500, disableOnInteraction: false }}
-          pagination={{ clickable: true, el: ".testimonial-pagination" }}
+          speed={900}
+          autoplay={{ delay: 3200, disableOnInteraction: false, pauseOnMouseEnter: true }}
+          grabCursor
           breakpoints={{
-            768: { slidesPerView: 2 },
+            640: { slidesPerView: 2 },
             1024: { slidesPerView: 3 },
           }}
-          style={{
-            "--swiper-pagination-color": "var(--color-primary-600)",
-            "--swiper-pagination-bullet-inactive-color": "var(--color-ink-200)",
-            "--swiper-pagination-bullet-inactive-opacity": "1",
-          } as React.CSSProperties}
-          className="!overflow-visible !pb-14"
+          className="!pb-2"
         >
           {(testimonials as Testimonial[]).map((testimonial) => (
-            <SwiperSlide key={testimonial.id} className="!h-auto py-2">
+            <SwiperSlide key={testimonial.id} className="!h-auto pb-2 pt-9">
               <TestimonialCard testimonial={testimonial} />
             </SwiperSlide>
           ))}
         </Swiper>
-        <div className="testimonial-pagination mt-2 flex justify-center gap-2 [&_.swiper-pagination-bullet]:h-2 [&_.swiper-pagination-bullet]:w-2 [&_.swiper-pagination-bullet]:rounded-full [&_.swiper-pagination-bullet]:bg-ink-200 [&_.swiper-pagination-bullet-active]:bg-primary-600 [&_.swiper-pagination-bullet-active]:w-6 [&_.swiper-pagination-bullet]:transition-all" />
       </Container>
     </section>
   );
