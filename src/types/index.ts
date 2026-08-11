@@ -124,3 +124,24 @@ export interface EnvironmentalStat {
 export interface IconType {
   Icon?: LucideIcon;
 }
+
+export interface TraceabilityBadge {
+  id: string;
+  label: string;
+  icon: string;
+  position: "top-left" | "top-right" | "bottom-left" | "bottom-right";
+}
+
+export interface TraceabilityCheckpoint {
+  id: number;
+  number: string;
+  navTitle: string;
+  navIcon: string;
+  stepLabel: string;
+  heading: string;
+  description: string;
+  points: string[];
+  protectionMessage: string;
+  ruleRef: string;
+  badges: TraceabilityBadge[];
+}

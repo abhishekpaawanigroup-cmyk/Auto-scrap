@@ -5,6 +5,7 @@ import { StatsSection } from "@/components/sections/StatsSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ServicesSection } from "@/components/sections/ServicesSection";
+import { TraceabilitySection } from "@/components/sections/traceability/TraceabilitySection";
 import { ProcessGallery } from "@/components/sections/ProcessGallery";
 import { EnvironmentalImpact } from "@/components/sections/EnvironmentalImpact";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
@@ -33,6 +34,7 @@ export default function Home() {
       <ProcessSection />
       <WhyChooseUs />
       <ServicesSection />
+      <TraceabilitySection />
       <ProcessGallery />
       <EnvironmentalImpact />
       <TestimonialsSection />

@@ -1,0 +1,108 @@
+[
+  {
+    "id": 1,
+    "number": "01",
+    "navTitle": "Identity & Handover",
+    "navIcon": "Fingerprint",
+    "stepLabel": "STEP 01",
+    "heading": "Identity and handover verification",
+    "description": "Vehicle is checked against stolen-vehicle records and the handover is documented.",
+    "points": [
+      "Ownership and identity are verified",
+      "Vehicle is validated on VAHAN & stolen records",
+      "Handover is documented with date, time & location"
+    ],
+    "protectionMessage": "This protects you from disputes later by proving the vehicle was genuine and handed over by the right person.",
+    "ruleRef": "RVSV Rules 2021 · Rules 4(3) and 4(4)",
+    "badges": [
+      { "id": "vin", "label": "VIN Verified", "icon": "Fingerprint", "position": "top-left" },
+      { "id": "genuine", "label": "Vehicle Genuine", "icon": "ShieldCheck", "position": "top-right" },
+      { "id": "owner", "label": "Owner Verified", "icon": "BadgeCheck", "position": "bottom-left" },
+      { "id": "handover", "label": "Handover Recorded", "icon": "ClipboardList", "position": "bottom-right" }
+    ]
+  },
+  {
+    "id": 2,
+    "number": "02",
+    "navTitle": "Certificate on VAHAN",
+    "navIcon": "FileCheck2",
+    "stepLabel": "STEP 02",
+    "heading": "Certificate registered on VAHAN",
+    "description": "Once scrapping is approved, the Certificate of Vehicle Scrapping is generated and pushed directly to the VAHAN portal against your registration number.",
+    "points": [
+      "Certificate of Vehicle Scrapping (CVS) generated digitally",
+      "Vehicle status updated to \"Scrapped\" on VAHAN",
+      "Registration number permanently linked to the certificate"
+    ],
+    "protectionMessage": "This protects you from future liability - the government record shows your vehicle was legally scrapped, not just resold informally.",
+    "ruleRef": "RVSV Rules 2021 · Rule 6(2)",
+    "badges": [
+      { "id": "cert", "label": "Certificate Verified", "icon": "FileCheck2", "position": "top-left" },
+      { "id": "vahan", "label": "VAHAN Synced", "icon": "Database", "position": "top-right" },
+      { "id": "cvs", "label": "CVS Issued", "icon": "Award", "position": "bottom-right" }
+    ]
+  },
+  {
+    "id": 3,
+    "number": "03",
+    "navTitle": "Proof of Cut Captured",
+    "navIcon": "Scissors",
+    "stepLabel": "STEP 03",
+    "heading": "Proof of the physical cut is captured",
+    "description": "The exact moment your vehicle is irreversibly dismantled is recorded on camera with a timestamp, so there is indisputable proof scrapping actually happened.",
+    "points": [
+      "Cutting event recorded on facility CCTV with timestamp",
+      "Chassis number visibly cut and photographed",
+      "Footage retained as part of the compliance file"
+    ],
+    "protectionMessage": "This protects you from someone re-registering or misusing your vehicle's identity after scrapping.",
+    "ruleRef": "RVSV Rules 2021 · Rule 5(4)",
+    "badges": [
+      { "id": "cutevent", "label": "Cut Event Recorded", "icon": "Scissors", "position": "top-left" },
+      { "id": "timestamp", "label": "Timestamp Locked", "icon": "Lock", "position": "top-right" },
+      { "id": "chassis", "label": "Chassis Voided", "icon": "Ban", "position": "bottom-right" }
+    ]
+  },
+  {
+    "id": 4,
+    "number": "04",
+    "navTitle": "Material Audit Trail",
+    "navIcon": "Recycle",
+    "stepLabel": "STEP 04",
+    "heading": "Every material is tracked end-to-end",
+    "description": "Recovered steel, aluminium, copper and other materials are logged and traced from your vehicle to the certified recycling stream.",
+    "points": [
+      "Recovered material weighed and logged by category",
+      "Steel, aluminium & copper tracked to certified recyclers",
+      "Traceability ID links materials back to your vehicle"
+    ],
+    "protectionMessage": "This protects the environment and proves your vehicle was recycled responsibly, not dumped or informally scrapped.",
+    "ruleRef": "RVSV Rules 2021 · Rule 7(1)",
+    "badges": [
+      { "id": "steel", "label": "Steel Tracked", "icon": "Boxes", "position": "top-left" },
+      { "id": "copper", "label": "Copper Logged", "icon": "Recycle", "position": "top-right" },
+      { "id": "trail", "label": "Trail Verified", "icon": "Search", "position": "bottom-right" }
+    ]
+  },
+  {
+    "id": 5,
+    "number": "05",
+    "navTitle": "Record Stays Retrievable",
+    "navIcon": "Database",
+    "stepLabel": "STEP 05",
+    "heading": "Your record stays retrievable, always",
+    "description": "Every document from handover to certificate is stored securely and can be retrieved on demand - for insurance, RTO queries, or your own peace of mind.",
+    "points": [
+      "All documents archived in a secure digital record",
+      "Retrievable anytime using your vehicle or certificate number",
+      "Available for RTO, insurance, or legal reference"
+    ],
+    "protectionMessage": "This protects you years later - if a dispute ever comes up, your proof is always one search away.",
+    "ruleRef": "RVSV Rules 2021 · Rule 8(3)",
+    "badges": [
+      { "id": "archived", "label": "Record Archived", "icon": "Archive", "position": "top-left" },
+      { "id": "searchready", "label": "Search Ready", "icon": "Search", "position": "top-right" },
+      { "id": "retrievable", "label": "Retrievable Anytime", "icon": "ShieldCheck", "position": "bottom-right" }
+    ]
+  }
+]

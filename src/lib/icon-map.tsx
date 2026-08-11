@@ -26,6 +26,13 @@ import {
   Boxes,
   Star,
   Quote,
+  Fingerprint,
+  BadgeCheck,
+  Scissors,
+  Lock,
+  Ban,
+  Database,
+  Archive,
   type LucideIcon,
 } from "lucide-react";
 
@@ -57,6 +64,13 @@ export const ICON_MAP: Record<string, LucideIcon> = {
   Boxes,
   Star,
   Quote,
+  Fingerprint,
+  BadgeCheck,
+  Scissors,
+  Lock,
+  Ban,
+  Database,
+  Archive,
 };
 
 export function getIcon(name: string): LucideIcon {
