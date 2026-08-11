@@ -12,7 +12,7 @@ import type { Service } from "@/types";
 export const metadata: Metadata = buildMetadata({
   title: "Our Services",
   description:
-    "Explore Carcrush24's full range of services — vehicle scrapping, RC cancellation, pollution certificates, buy-back, and corporate fleet disposal.",
+    "Explore Carcrush24's full range of services - vehicle scrapping, RC cancellation, pollution certificates, buy-back, and corporate fleet disposal.",
   path: "/services",
 });
 
@@ -23,7 +23,7 @@ export default function ServicesPage() {
         eyebrow="Our Services"
         breadcrumb="Services"
         title="End-to-End Vehicle Recovery Services"
-        description="Beyond scrapping — complete documentation, compliance handling, and fleet-scale support, all under one roof."
+        description="Beyond scrapping - complete documentation, compliance handling, and fleet-scale support, all under one roof."
       />
 
       <section className="bg-surface py-20 sm:py-28">
@@ -45,7 +45,7 @@ export default function ServicesPage() {
 
       <CTABanner
         title="Not Sure Which Service You Need?"
-        description="Talk to our advisors — we'll assess your situation and recommend the right path in minutes."
+        description="Talk to our advisors - we'll assess your situation and recommend the right path in minutes."
       />
     </>
   );

@@ -188,7 +188,7 @@ export function QuoteForm({ variant = "glass" }: { variant?: "glass" | "light" }
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="mt-2 flex h-13 items-center justify-center gap-2 rounded-full bg-accent-500 py-3.5 text-sm font-bold text-white shadow-[var(--shadow-glow)] transition-colors hover:bg-accent-600 disabled:opacity-70"
+            className="mt-2 flex h-13 items-center justify-center gap-2 rounded-full bg-primary-600 py-3.5 text-sm font-bold text-white shadow-[var(--shadow-glow)] transition-colors hover:bg-primary-700 disabled:opacity-70"
           >
             {status === "submitting" ? <Loader2 className="h-4 w-4 animate-spin" /> : "Get Quote Now"}
           </button>

@@ -31,7 +31,7 @@ export default function AboutPage() {
         eyebrow="About Vantage"
         breadcrumb="About"
         title="Building India's Most Trusted Recovery Network"
-        description="For over a decade, we've combined regulatory precision with genuine care for the environment — one vehicle at a time."
+        description="For over a decade, we've combined regulatory precision with genuine care for the environment - one vehicle at a time."
       />
 
       <section className="bg-surface py-20 sm:py-28">
@@ -52,7 +52,7 @@ export default function AboutPage() {
             <p className="text-[15px] leading-relaxed text-ink-500">
               Carcrush24 began in 2013 with a simple observation: India&apos;s vehicle
               scrapping industry was fragmented, informal, and often environmentally careless.
-              We set out to build something different — a certified, technology-enabled recovery
+              We set out to build something different - a certified, technology-enabled recovery
               network that vehicle owners could actually trust.
             </p>
             <p className="text-[15px] leading-relaxed text-ink-500">
@@ -74,7 +74,7 @@ export default function AboutPage() {
               <h3 className="mt-6 text-xl font-bold text-ink-900">Our Mission</h3>
               <p className="mt-3 text-[15px] leading-relaxed text-ink-500">
                 To make responsible vehicle recovery the default choice for every Indian vehicle
-                owner — by removing the friction, opacity, and mistrust that has long defined the
+                owner - by removing the friction, opacity, and mistrust that has long defined the
                 scrapping industry.
               </p>
             </Reveal>
@@ -85,7 +85,7 @@ export default function AboutPage() {
               <h3 className="mt-6 text-xl font-bold text-ink-900">Our Vision</h3>
               <p className="mt-3 text-[15px] leading-relaxed text-ink-500">
                 A future where every end-of-life vehicle in India is recovered through a certified
-                network — recapturing materials responsibly and measurably reducing the country&apos;s
+                network - recapturing materials responsibly and measurably reducing the country&apos;s
                 automotive carbon footprint.
               </p>
             </Reveal>

@@ -16,7 +16,7 @@ export function ServicesSection() {
         <SectionTitle
           eyebrow="Our Services"
           title="End-to-End Vehicle Recovery Services"
-          description="Beyond scrapping — full documentation, compliance, and fleet-scale support under one roof."
+          description="Beyond scrapping - full documentation, compliance, and fleet-scale support under one roof."
         />
         <RevealGroup className="mt-14 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {featured.map((service) => (

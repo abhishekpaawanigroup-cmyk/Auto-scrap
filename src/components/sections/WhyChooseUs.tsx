@@ -14,7 +14,7 @@ export function WhyChooseUs() {
         <SectionTitle
           eyebrow="Why Choose Us"
           title="Built for Trust, Engineered for Speed"
-          description="Every part of our process is designed to remove friction — and give you full visibility from quote to certificate."
+          description="Every part of our process is designed to remove friction - and give you full visibility from quote to certificate."
           light
         />
         <RevealGroup className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">

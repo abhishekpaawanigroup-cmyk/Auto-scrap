@@ -8,13 +8,13 @@
   {
     "id": "f2",
     "question": "How is the scrap value of my vehicle calculated?",
-    "answer": "Valuation is based on the vehicle's weight, make, model, age, and recoverable material composition — primarily steel, aluminium, and other metals. We provide a transparent breakdown before you accept any offer.",
+    "answer": "Valuation is based on the vehicle's weight, make, model, age, and recoverable material composition - primarily steel, aluminium, and other metals. We provide a transparent breakdown before you accept any offer.",
     "category": "Pricing"
   },
   {
     "id": "f3",
     "question": "Do you offer free pickup across all cities?",
-    "answer": "We offer free doorstep pickup in over 100 cities across India. If your city isn't listed at checkout, contact our support team — we regularly expand our service network.",
+    "answer": "We offer free doorstep pickup in over 100 cities across India. If your city isn't listed at checkout, contact our support team - we regularly expand our service network.",
     "category": "Pickup"
   },
   {
@@ -32,7 +32,7 @@
   {
     "id": "f6",
     "question": "When do I receive payment for my vehicle?",
-    "answer": "Payment is transferred digitally at the moment of pickup, directly to your registered bank account — there is no waiting period after your vehicle leaves your location.",
+    "answer": "Payment is transferred digitally at the moment of pickup, directly to your registered bank account - there is no waiting period after your vehicle leaves your location.",
     "category": "Pricing"
   },
   {

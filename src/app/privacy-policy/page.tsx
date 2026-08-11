@@ -15,7 +15,7 @@ const sections: LegalSection[] = [
   {
     heading: "1. Information We Collect",
     body: [
-      "We collect information you provide directly to us when requesting a quote, scheduling a pickup, or contacting our support team — including your name, phone number, email address, vehicle details, and pickup location.",
+      "We collect information you provide directly to us when requesting a quote, scheduling a pickup, or contacting our support team - including your name, phone number, email address, vehicle details, and pickup location.",
       "We may also collect limited technical information such as browser type and device information to help us improve our website experience.",
     ],
   },

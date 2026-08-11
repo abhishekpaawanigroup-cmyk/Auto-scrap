@@ -6,7 +6,7 @@ import { SITE_CONFIG } from "@/constants/site";
 
 export function CTABanner({
   title = "Ready to Scrap Your Vehicle?",
-  description = "Get the best price for your old vehicle. Free pickup, instant payment, and a fully eco-friendly process — completed in days, not weeks.",
+  description = "Get the best price for your old vehicle. Free pickup, instant payment, and a fully eco-friendly process - completed in days, not weeks.",
 }: {
   title?: string;
   description?: string;

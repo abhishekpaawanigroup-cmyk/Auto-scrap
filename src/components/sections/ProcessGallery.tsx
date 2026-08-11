@@ -20,7 +20,7 @@ export function ProcessGallery() {
         <SectionTitle
           eyebrow="Inside The Process"
           title="A Look Inside Our Facility"
-          description="From inspection to shredding — a transparent view into how your vehicle is recovered and recycled."
+          description="From inspection to shredding - a transparent view into how your vehicle is recovered and recycled."
         />
         <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {items.map((item, index) => (

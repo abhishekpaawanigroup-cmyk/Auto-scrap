@@ -4,7 +4,7 @@
     "name": "Rohit Sharma",
     "location": "Delhi",
     "rating": 5,
-    "review": "The entire process felt refreshingly professional — from the video valuation call to pickup, everything was on time and the payment hit my account before the driver even left.",
+    "review": "The entire process felt refreshingly professional - from the video valuation call to pickup, everything was on time and the payment hit my account before the driver even left.",
     "image": "/images/testimonials/rohit.svg",
     "vehicle": "Honda City, 2011"
   },
@@ -22,7 +22,7 @@
     "name": "Vikram Singh",
     "location": "Bangalore",
     "rating": 5,
-    "review": "Got a noticeably better quote than two other scrap dealers I called. Transparent pricing, no last-minute deductions at pickup — exactly what they quoted is what I received.",
+    "review": "Got a noticeably better quote than two other scrap dealers I called. Transparent pricing, no last-minute deductions at pickup - exactly what they quoted is what I received.",
     "image": "/images/testimonials/vikram.svg",
     "vehicle": "Toyota Innova, 2008"
   },
@@ -33,7 +33,7 @@
     "rating": 5,
     "review": "Our office had six old fleet vehicles to dispose of. Their corporate team coordinated pickup across two locations and gave us a single consolidated compliance report.",
     "image": "/images/testimonials/priya.svg",
-    "vehicle": "Fleet — 6 Vehicles"
+    "vehicle": "Fleet - 6 Vehicles"
   },
   {
     "id": "t5",

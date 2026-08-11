@@ -38,7 +38,7 @@ export default function ContactPage() {
         eyebrow="Get In Touch"
         breadcrumb="Contact"
         title="We're Here to Help"
-        description="Have a question about pricing, pickup, or documentation? Reach out — our team responds within one business day."
+        description="Have a question about pricing, pickup, or documentation? Reach out - our team responds within one business day."
       />
 
       <section className="bg-surface py-20 sm:py-28">

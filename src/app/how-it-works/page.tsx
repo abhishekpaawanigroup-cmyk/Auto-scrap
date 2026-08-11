@@ -15,7 +15,7 @@ import type { ProcessStep } from "@/types";
 export const metadata: Metadata = buildMetadata({
   title: "How It Works",
   description:
-    "A detailed walkthrough of Carcrush24's 6-step process — from instant quote request to certified eco-friendly recycling.",
+    "A detailed walkthrough of Carcrush24's 6-step process - from instant quote request to certified eco-friendly recycling.",
   path: "/how-it-works",
 });
 
@@ -37,7 +37,7 @@ export default function HowItWorksPage() {
         eyebrow="How It Works"
         breadcrumb="How It Works"
         title="A Transparent, 6-Step Recovery Process"
-        description="Every stage is tracked and documented — so you always know exactly where your vehicle is in the process."
+        description="Every stage is tracked and documented - so you always know exactly where your vehicle is in the process."
       />
 
       <section className="bg-surface py-20 sm:py-28">
@@ -95,7 +95,7 @@ export default function HowItWorksPage() {
         <Container>
           <SectionTitle
             eyebrow="Timeline Estimate"
-            title="From Quote to Certificate — What to Expect"
+            title="From Quote to Certificate - What to Expect"
             description="Most vehicles are picked up within 48 hours, with RC cancellation completed inside 20 working days."
           />
           <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-3">

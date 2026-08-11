@@ -12,7 +12,7 @@ export function VehicleCategories() {
         <SectionTitle
           eyebrow="Vehicle Coverage"
           title="We Recover All Types of Vehicles"
-          description="From city runabouts to heavy industrial machinery — every category, processed to the same certified standard."
+          description="From city runabouts to heavy industrial machinery - every category, processed to the same certified standard."
         />
         <RevealGroup className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {(vehicles as VehicleType[]).map((vehicle) => (

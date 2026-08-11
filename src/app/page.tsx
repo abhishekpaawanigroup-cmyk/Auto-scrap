@@ -5,12 +5,10 @@ import { StatsSection } from "@/components/sections/StatsSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { ServicesSection } from "@/components/sections/ServicesSection";
-import { BrandsSlider } from "@/components/sections/BrandsSlider";
 import { ProcessGallery } from "@/components/sections/ProcessGallery";
 import { EnvironmentalImpact } from "@/components/sections/EnvironmentalImpact";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
-import { PartnersSlider } from "@/components/sections/PartnersSlider";
 import { CTABanner } from "@/components/ui/CTABanner";
 import { buildMetadata, faqJsonLd } from "@/lib/seo";
 import { SITE_CONFIG } from "@/constants/site";
@@ -35,12 +33,10 @@ export default function Home() {
       <ProcessSection />
       <WhyChooseUs />
       <ServicesSection />
-      <BrandsSlider />
       <ProcessGallery />
       <EnvironmentalImpact />
       <TestimonialsSection />
       <FAQSection />
-      <PartnersSlider />
       <CTABanner />
     </>
   );

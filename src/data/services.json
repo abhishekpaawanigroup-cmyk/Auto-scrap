@@ -4,7 +4,7 @@
     "slug": "vehicle-scrapping",
     "title": "Vehicle Scrapping",
     "shortDescription": "End-to-end scrapping for all vehicle types, compliant with government norms.",
-    "description": "Our core service covers the complete scrapping lifecycle — from inspection and valuation to certified dismantling. Every vehicle is processed at our government-authorized facility using standardized recovery protocols that maximize material reclamation while meeting environmental compliance requirements.",
+    "description": "Our core service covers the complete scrapping lifecycle - from inspection and valuation to certified dismantling. Every vehicle is processed at our government-authorized facility using standardized recovery protocols that maximize material reclamation while meeting environmental compliance requirements.",
     "icon": "Car",
     "image": "/images/services/scrapping.svg",
     "benefits": [
@@ -64,7 +64,7 @@
     "slug": "buy-back-service",
     "title": "Buy Back Service",
     "shortDescription": "We purchase old vehicles in any condition at fair market value.",
-    "description": "Whether your vehicle runs or not, our buy-back program offers a straightforward path to converting it into cash. We evaluate based on transparent, weight and material-based pricing models — no negotiation games.",
+    "description": "Whether your vehicle runs or not, our buy-back program offers a straightforward path to converting it into cash. We evaluate based on transparent, weight and material-based pricing models - no negotiation games.",
     "icon": "HandCoins",
     "image": "/images/services/buyback.svg",
     "benefits": [
@@ -79,7 +79,7 @@
     "slug": "corporate-fleet-disposal",
     "title": "Corporate Fleet Disposal",
     "shortDescription": "Structured, compliant disposal programs for enterprise vehicle fleets.",
-    "description": "We partner with corporates and government departments to manage large-scale fleet decommissioning — coordinating logistics, batch documentation, and reporting across multiple vehicles and locations simultaneously.",
+    "description": "We partner with corporates and government departments to manage large-scale fleet decommissioning - coordinating logistics, batch documentation, and reporting across multiple vehicles and locations simultaneously.",
     "icon": "Building2",
     "image": "/images/services/fleet.svg",
     "benefits": [
@@ -109,7 +109,7 @@
     "slug": "auction-assistance",
     "title": "Auction Assistance",
     "shortDescription": "Support for institutions liquidating vehicles through auction routes.",
-    "description": "For government bodies and institutions required to dispose of vehicles via auction, we provide end-to-end support — from valuation benchmarking to post-auction scrapping and documentation for the winning process.",
+    "description": "For government bodies and institutions required to dispose of vehicles via auction, we provide end-to-end support - from valuation benchmarking to post-auction scrapping and documentation for the winning process.",
     "icon": "Gavel",
     "image": "/images/services/auction.svg",
     "benefits": [

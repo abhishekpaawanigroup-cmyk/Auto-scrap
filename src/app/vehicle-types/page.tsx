@@ -11,7 +11,7 @@ import type { VehicleType } from "@/types";
 export const metadata: Metadata = buildMetadata({
   title: "Vehicle Types We Recover",
   description:
-    "Browse every vehicle category Carcrush24 recovers — cars, bikes, trucks, buses, luxury cars, electric vehicles, and heavy machinery.",
+    "Browse every vehicle category Carcrush24 recovers - cars, bikes, trucks, buses, luxury cars, electric vehicles, and heavy machinery.",
   path: "/vehicle-types",
 });
 

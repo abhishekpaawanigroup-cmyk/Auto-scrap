@@ -14,7 +14,7 @@ export function ProcessSection() {
         <SectionTitle
           eyebrow="The Process"
           title="Our Simple 6-Step Process"
-          description="A structured, transparent journey from first quote to certified recycling — every step tracked."
+          description="A structured, transparent journey from first quote to certified recycling - every step tracked."
         />
 
         <div className="mt-16 hidden lg:block">

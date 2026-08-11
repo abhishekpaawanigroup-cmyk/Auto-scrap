@@ -24,9 +24,9 @@ export function Hero() {
         className="object-cover object-top"
       />
       {/* Dark wash: solid on the left for text legibility, fading out over the photo on the right */}
-      <div className="absolute inset-0 bg-gradient-to-r from-ink-950 via-ink-950/85 to-ink-950/30 sm:via-ink-950/80 sm:to-ink-950/25" aria-hidden />
-      <div className="absolute inset-0 bg-gradient-to-t from-ink-950 via-transparent to-ink-950/40" aria-hidden />
-      <div className="absolute inset-0 bg-grid opacity-[0.01]" aria-hidden />
+      <div className="absolute inset-0 bg-gradient-to-r from-ink-950/95 via-ink-950/95 to-ink-950/75 sm:via-ink-950/75 sm:to-ink-950/20" aria-hidden />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink-950/60 via-transparent to-ink-950/25" aria-hidden />
+      <div className="absolute inset-0 bg-grid opacity-[0.04]" aria-hidden />
       
 
       <Container className="relative z-10 grid grid-cols-1 gap-16 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:gap-10 lg:py-28">
@@ -35,7 +35,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-            className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-accent-400"
+            className="inline-flex w-fit items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.14em] text-primary-500"
           >
            
             India&apos;s Trusted End-of-Life Vehicle Recovery
