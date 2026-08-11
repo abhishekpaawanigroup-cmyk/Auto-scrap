@@ -16,7 +16,7 @@ export function VehicleCategories() {
         />
         <RevealGroup className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
           {(vehicles as VehicleType[]).map((vehicle) => (
-            <RevealItem key={vehicle.id} direction="up">
+            <RevealItem key={vehicle.id} direction="up" className="h-full">
               <VehicleCard vehicle={vehicle} />
             </RevealItem>
           ))}

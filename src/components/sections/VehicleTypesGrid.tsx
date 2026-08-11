@@ -40,7 +40,7 @@ export function VehicleTypesGrid({ vehicles }: { vehicles: VehicleType[] }) {
         className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4"
       >
         {filtered.map((vehicle) => (
-          <motion.div key={vehicle.id} layout initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
+          <motion.div key={vehicle.id} layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="h-full">
             <VehicleCard vehicle={vehicle} />
           </motion.div>
         ))}
