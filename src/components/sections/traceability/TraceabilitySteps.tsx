@@ -1,9 +1,12 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { getIcon } from "@/lib/icon-map";
 import { cn } from "@/lib/utils";
 import type { TraceabilityCheckpoint } from "@/types";
+
+const LINE_DURATION = 0.7;
 
 export function TraceabilitySteps({
   checkpoints,
@@ -14,6 +17,25 @@ export function TraceabilitySteps({
   activeIndex: number;
   onSelect: (index: number) => void;
 }) {
+  // The connecting line travels toward `activeIndex` immediately; the circle
+  // glow only "arrives" once the line reaches it, so steps light up in
+  // sequence with the line instead of jumping ahead of it.
+  const [displayIndex, setDisplayIndex] = useState(activeIndex);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    if (activeIndex === displayIndex) return undefined;
+    timeoutRef.current = setTimeout(() => {
+      setDisplayIndex(activeIndex);
+    }, LINE_DURATION * 1000);
+    return () => {
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeIndex]);
+
+  const isTraveling = activeIndex !== displayIndex;
   const progress = checkpoints.length > 1 ? activeIndex / (checkpoints.length - 1) : 0;
   const inset = 100 / (checkpoints.length * 2);
 
@@ -62,15 +84,31 @@ export function TraceabilitySteps({
             className="h-full bg-gradient-to-r from-primary-600 to-primary-400"
             initial={false}
             animate={{ width: `${progress * 100}%` }}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: LINE_DURATION, ease: "linear" }}
+          />
+        </div>
+        <div
+          className="pointer-events-none absolute top-6"
+          style={{ left: `${inset}%`, right: `${inset}%` }}
+          aria-hidden
+        >
+          <motion.span
+            className="absolute top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full bg-primary-500"
+            style={{ boxShadow: "0 0 10px 3px rgba(220,38,38,0.55)" }}
+            initial={false}
+            animate={{ left: `${progress * 100}%`, opacity: isTraveling ? 1 : 0 }}
+            transition={{
+              left: { duration: LINE_DURATION, ease: "linear" },
+              opacity: { duration: 0.2 },
+            }}
           />
         </div>
 
         <div className="relative grid" style={{ gridTemplateColumns: `repeat(${checkpoints.length}, minmax(0, 1fr))` }}>
           {checkpoints.map((checkpoint, index) => {
             const Icon = getIcon(checkpoint.navIcon);
-            const isActive = index === activeIndex;
-            const isDone = index < activeIndex;
+            const isActive = index === displayIndex;
+            const isDone = index < displayIndex;
             return (
               <button
                 key={checkpoint.id}
