@@ -35,9 +35,16 @@ export function Header() {
             : "border-transparent bg-white"
         )}
       >
-        <Container className={cn("flex items-center justify-between transition-all duration-300", scrolled ? "h-[76px]" : "h-[88px]")}>
+        <Container className={cn("flex items-center justify-between transition-all duration-300", scrolled ? "h-[76px]" : "h-[80px]")}>
           <Link href="/" className="shrink-0">
-            <Image src="/images/logo.png" alt={SITE_CONFIG.name} width={110} height={64} priority />
+            <Image
+              src="/images/logo.png"
+              alt={SITE_CONFIG.name}
+              width={120}
+              height={80}
+              priority
+              className="h-14 w-auto sm:h-16"
+            />
           </Link>
 
           <nav className="hidden items-center gap-1 lg:flex">

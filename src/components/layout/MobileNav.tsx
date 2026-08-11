@@ -65,7 +65,13 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
             className="fixed inset-y-0 right-0 z-50 flex w-[86%] max-w-sm flex-col bg-white shadow-2xl lg:hidden"
           >
             <div className="flex items-center justify-between border-b border-border px-6 py-5">
-              <Image src="/images/logo.png" alt={SITE_CONFIG.name} width={56} height={56} />
+              <Image
+                src="/images/logo.png"
+                alt={SITE_CONFIG.name}
+                width={84}
+                height={56}
+                className="h-11 w-auto"
+              />
               <button
                 type="button"
                 onClick={onClose}

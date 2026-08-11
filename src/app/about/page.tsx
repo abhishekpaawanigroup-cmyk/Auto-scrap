@@ -38,7 +38,14 @@ export default function AboutPage() {
         <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <Reveal direction="left">
             <div className="relative overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-premium-lg)]">
-              <Image src="/images/about/story.svg" alt="Our story" width={720} height={560} className="h-full w-full object-cover" />
+              <Image
+                src="/images/about/story.svg"
+                alt="Our story"
+                width={720}
+                height={560}
+                priority
+                className="h-full w-full object-cover"
+              />
             </div>
           </Reveal>
           <Reveal direction="right" className="flex flex-col gap-5">

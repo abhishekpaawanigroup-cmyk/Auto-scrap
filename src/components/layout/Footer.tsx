@@ -19,11 +19,17 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-ink-950 text-ink-300">
       <div className="absolute inset-0 bg-grid opacity-[0.03]" aria-hidden />
-      <Container className="relative z-10 py-16 sm:py-20">
+      <Container className="relative z-10 pt-16 pb-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_0.8fr_0.9fr_1.1fr_1.1fr]">
           <div className="flex flex-col gap-5">
-            <div className="w-fit rounded-xl bg-white p-2">
-              <Image src="/images/logo.png" alt={SITE_CONFIG.name} width={64} height={64} />
+            <div className="w-fit rounded-xl p-2">
+              <Image
+                src="/images/logo1.png"
+                alt={SITE_CONFIG.name}
+                width={120}
+                height={80}
+                className="h-14 w-auto sm:h-16"
+              />
             </div>
             <p className="max-w-xs text-sm leading-relaxed text-ink-400">
               India&apos;s premium end-of-life vehicle recovery company. Government-authorized

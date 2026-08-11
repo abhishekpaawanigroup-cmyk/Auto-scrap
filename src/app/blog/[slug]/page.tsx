@@ -113,7 +113,14 @@ export default async function BlogPostPage({
 
         <Container className="max-w-3xl py-14">
           <Reveal className="overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-premium-lg)]">
-            <Image src={post.image} alt={post.title} width={960} height={600} className="h-auto w-full object-cover" />
+            <Image
+              src={post.image}
+              alt={post.title}
+              width={960}
+              height={600}
+              priority
+              className="h-auto w-full object-cover"
+            />
           </Reveal>
 
           <div className="prose-content mt-10 flex flex-col gap-5">

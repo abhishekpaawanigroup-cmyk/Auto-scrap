@@ -83,7 +83,14 @@ export default async function ServiceDetailPage({
             </div>
           </Reveal>
           <Reveal direction="right" className="overflow-hidden rounded-3xl border border-white/10">
-            <Image src={service.image} alt={service.title} width={720} height={540} className="h-full w-full object-cover" />
+            <Image
+              src={service.image}
+              alt={service.title}
+              width={720}
+              height={540}
+              priority
+              className="h-full w-full object-cover"
+            />
           </Reveal>
         </Container>
       </section>
