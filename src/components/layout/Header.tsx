@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { TopBar } from "@/components/layout/TopBar";
 import { AnimatedHamburger, MobileNav } from "@/components/layout/MobileNav";
+import { WhatsAppIconButton } from "@/components/layout/WhatsAppIconButton";
 import { SITE_CONFIG } from "@/constants/site";
 import navigation from "@/data/navigation.json";
 import type { NavLink } from "@/types";
@@ -84,7 +85,10 @@ export function Header() {
             </Button>
           </div>
 
-          <AnimatedHamburger open={mobileOpen} onClick={() => setMobileOpen((v) => !v)} />
+          <div className="flex items-center gap-4 lg:hidden">
+            <WhatsAppIconButton />
+            <AnimatedHamburger open={mobileOpen} onClick={() => setMobileOpen((v) => !v)} />
+          </div>
         </Container>
       </div>
 

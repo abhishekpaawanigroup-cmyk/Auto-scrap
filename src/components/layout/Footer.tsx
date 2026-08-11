@@ -4,6 +4,7 @@ import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { Container } from "@/components/ui/Container";
 import { BackToTop } from "@/components/layout/BackToTop";
+import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { NewsletterForm } from "@/components/layout/NewsletterForm";
 import { SITE_CONFIG } from "@/constants/site";
 import navigation from "@/data/navigation.json";
@@ -97,6 +98,7 @@ export function Footer() {
         </div>
       </Container>
       <BackToTop />
+      <WhatsAppButton />
     </footer>
   );
 }
