@@ -12,7 +12,7 @@ import type { EnvironmentalStat } from "@/types";
 
 export function EnvironmentalImpact() {
   return (
-    <section className="relative overflow-hidden bg-primary-900 py-20 sm:py-28">
+    <section className="relative overflow-hidden bg-ink-950 py-20 sm:py-28">
       <div className="absolute inset-0 bg-grid opacity-[0.05]" aria-hidden />
       <Container className="relative z-10">
         <SectionTitle

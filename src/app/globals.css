@@ -2,36 +2,36 @@
 
 @theme {
   /* Brand palette */
-  --color-primary-50: #fff1f1;
-  --color-primary-100: #ffe1e1;
-  --color-primary-200: #ffc9c7;
-  --color-primary-300: #fe9f9c;
-  --color-primary-400: #fc6e70;
-  --color-primary-500: #f2454a;
-  --color-primary-600: #dc2626;
-  --color-primary-700: #b91c1c;
-  --color-primary-800: #991b1b;
-  --color-primary-900: #7f1d1d;
+ --color-primary-50:  #edfafd;
+--color-primary-100: #d5f3f8;
+--color-primary-200: #b2e7ef;
+--color-primary-300: #7fd5e2;
+--color-primary-400: #45b9cc;
+--color-primary-500: #00c7ff;
+--color-primary-600: #087795;
+--color-primary-700: #07637d;
+--color-primary-800: #075268;
+--color-primary-900: #064456;
 
-  --color-accent-400: #ff8a8a;
-  --color-accent-500: #ff4d4d;
-  --color-accent-600: #e83a3a;
+ --color-accent-400: #45b9cc;
+--color-accent-500: #0989ad;
+--color-accent-600: #087795;
 
-  --color-ink-50: #f8fafc;
-  --color-ink-100: #f1f5f9;
-  --color-ink-200: #e5e7eb;
-  --color-ink-300: #cbd5e1;
-  --color-ink-400: #94a3b8;
-  --color-ink-500: #64748b;
-  --color-ink-600: #475569;
-  --color-ink-700: #334155;
-  --color-ink-800: #1e293b;
-  --color-ink-900: #111827;
-  --color-ink-950: #000000;
+  --color-ink-50:  #f4fafc;
+--color-ink-100: #e8f2f5;
+--color-ink-200: #d5e4e8;
+--color-ink-300: #bdcfd4;
+--color-ink-400: #899da4;
+--color-ink-500: #5f747c;
+--color-ink-600: #455a62;
+--color-ink-700: #34484f;
+--color-ink-800: #26383e;
+--color-ink-900: #192a30;
+--color-ink-950: #10191c;
 
-  --color-surface: #f8fafc;
-  --color-card: #ffffff;
-  --color-border: #e5e7eb;
+  --color-surface: #f4fafc;
+--color-card: #ffffff;
+--color-border: #d5e4e8;
 
   /* Typography */
   --font-display: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
@@ -45,7 +45,7 @@
   /* Shadows */
   --shadow-premium: 0 1px 2px 0 rgb(17 24 39 / 0.04), 0 12px 32px -8px rgb(17 24 39 / 0.10);
   --shadow-premium-lg: 0 4px 12px 0 rgb(17 24 39 / 0.05), 0 32px 64px -16px rgb(17 24 39 / 0.18);
-  --shadow-glow: 0 0 0 1px rgb(220 38 38 / 0.2), 0 20px 40px -12px rgb(0 0 0 / 0.45);
+  --shadow-glow: 0 0 0 1px rgb(31 160 85 / 0.25), 0 20px 40px -12px rgb(0 0 0 / 0.45);
 
   /* Easing */
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);

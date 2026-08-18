@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
+import { ServiceAvailability } from "@/components/sections/ServiceAvailability";
 import { VehicleCategories } from "@/components/sections/VehicleCategories";
 import { StatsSection } from "@/components/sections/StatsSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
-import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
-import { ServicesSection } from "@/components/sections/ServicesSection";
 import { TraceabilitySection } from "@/components/sections/traceability/TraceabilitySection";
 import { ProcessGallery } from "@/components/sections/ProcessGallery";
-import { EnvironmentalImpact } from "@/components/sections/EnvironmentalImpact";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTABanner } from "@/components/ui/CTABanner";
@@ -29,14 +27,12 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
       />
       <Hero />
+      <ServiceAvailability />
       <VehicleCategories />
       <StatsSection />
       <ProcessSection />
-      <WhyChooseUs />
-      <ServicesSection />
       <TraceabilitySection />
       <ProcessGallery />
-      <EnvironmentalImpact />
       <TestimonialsSection />
       <FAQSection />
       <CTABanner />

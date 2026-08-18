@@ -40,7 +40,7 @@ export function TopBar() {
               aria-label={label}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex h-6 w-6 items-center justify-center rounded-full bg-white/5 text-ink-300 transition-colors hover:bg-accent-500 hover:text-ink-950"
+              className="flex h-6 w-6 items-center justify-center rounded-full bg-white/5 text-ink-300 transition-colors hover:bg-primary-500 hover:text-ink-950"
             >
               <Icon className="h-3 w-3" />
             </a>
