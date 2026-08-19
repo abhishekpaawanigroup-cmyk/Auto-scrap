@@ -28,7 +28,7 @@ export function Header() {
   const isHome = pathname === "/";
 
   return (
-    <header className={cn("sticky top-0 z-50", isHome && "theme-gold")}>
+    <header className={cn("sticky top-0 z-50", isHome && "theme-preview")}>
       <TopBar />
       <div
         className={cn(

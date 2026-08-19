@@ -21,7 +21,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Home() {
   return (
-    <div className="theme-gold">
+    <div className="theme-preview">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}

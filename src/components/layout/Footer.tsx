@@ -25,7 +25,7 @@ export function Footer() {
   const isHome = pathname === "/";
 
   return (
-    <footer className={cn("relative overflow-hidden bg-ink-950 text-ink-300", isHome && "theme-gold")}>
+    <footer className={cn("relative overflow-hidden bg-ink-950 text-ink-300", isHome && "theme-preview")}>
       <div className="absolute inset-0 bg-grid opacity-[0.03]" aria-hidden />
       <Container className="relative z-10 pt-16 pb-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_0.8fr_0.9fr_1.1fr_1.1fr]">
