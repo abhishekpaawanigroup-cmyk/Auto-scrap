@@ -21,7 +21,7 @@ export const metadata: Metadata = buildMetadata({
 
 export default function Home() {
   return (
-    <>
+    <div className="theme-gold">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
@@ -36,6 +36,6 @@ export default function Home() {
       <TestimonialsSection />
       <FAQSection />
       <CTABanner />
-    </>
+    </div>
   );
 }

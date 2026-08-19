@@ -25,8 +25,10 @@ export function Header() {
     setMobileOpen(false);
   }, [pathname]);
 
+  const isHome = pathname === "/";
+
   return (
-    <header className="sticky top-0 z-50">
+    <header className={cn("sticky top-0 z-50", isHome && "theme-gold")}>
       <TopBar />
       <div
         className={cn(

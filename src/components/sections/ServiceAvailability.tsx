@@ -92,7 +92,7 @@ export function ServiceAvailability() {
             <button
               type="submit"
               disabled={status === "checking" || pincode.length !== 6}
-              className="mt-4 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary-600 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition-colors hover:bg-primary-700 disabled:opacity-70"
+              className="mt-4 flex h-12 w-full items-center justify-center gap-2 rounded-xl bg-primary-600 text-sm font-semibold text-white shadow-[var(--shadow-glow)] transition-colors hover:bg-primary-700"
             >
               {status === "checking" ? (
                 <>

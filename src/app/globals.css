@@ -87,6 +87,25 @@
   }
 }
 
+.theme-gold {
+  --color-primary-50:  #fcfaed;
+  --color-primary-100: #f8f2d8;
+  --color-primary-200: #efe3b3;
+  --color-primary-300: #e2cf83;
+  --color-primary-400: #dfbc20;
+  --color-primary-500: #977e0c;
+  --color-primary-600: #7e6607;
+  --color-primary-700: #665105;
+  --color-primary-800: #503f07;
+  --color-primary-900: #403207;
+
+  --color-accent-400: #e29b36;
+  --color-accent-500: #c0750c;
+  --color-accent-600: #9b5b08;
+
+  --shadow-glow: 0 0 0 1px rgb(151 126 12 / 0.25), 0 20px 40px -12px rgb(0 0 0 / 0.45);
+}
+
 @layer utilities {
   .container-px {
     padding-left: 1.25rem;
