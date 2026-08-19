@@ -88,22 +88,22 @@
 }
 
 .theme-preview {
-  --color-primary-50:  #f6f4fb;
-  --color-primary-100: #e9e6f5;
-  --color-primary-200: #d1cae7;
-  --color-primary-300: #b2a7d2;
-  --color-primary-400: #9689bd;
-  --color-primary-500: #7b6da7;
-  --color-primary-600: #625190;
-  --color-primary-700: #4d3d76;
-  --color-primary-800: #3b2c5e;
-  --color-primary-900: #2c1f47;
+  --color-primary-50:  #fef2ec;
+  --color-primary-100: #fce2d4;
+  --color-primary-200: #f8c9af;
+  --color-primary-300: #f8a172;
+  --color-primary-400: #fa7c38;
+  --color-primary-500: #ed5805;
+  --color-primary-600: #c74605;
+  --color-primary-700: #a23807;
+  --color-primary-800: #7d2b08;
+  --color-primary-900: #5e2008;
 
-  --color-accent-400: #b587c5;
-  --color-accent-500: #9c46b9;
-  --color-accent-600: #813399;
+  --color-accent-400: #f5b13d;
+  --color-accent-500: #f5970a;
+  --color-accent-600: #c2720a;
 
-  --shadow-glow: 0 0 0 1px rgb(123 109 167 / 0.25), 0 20px 40px -12px rgb(0 0 0 / 0.45);
+  --shadow-glow: 0 0 0 1px rgb(237 88 5 / 0.25), 0 20px 40px -12px rgb(0 0 0 / 0.45);
 }
 
 @layer utilities {
