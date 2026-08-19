@@ -154,7 +154,7 @@ export function QuoteForm({ variant = "glass" }: { variant?: "glass" | "light" }
             />
           </FormField>
 
-          <FormField error={errors.registrationNo?.message} hint="Must be a valid Indian registration number, e.g. MH12AB1234">
+          <FormField error={errors.registrationNo?.message} hint="Must be a valid Indian registration number, e.g. UK12AB1234">
             <InputField
               isGlass={isGlass}
               placeholder="Enter Registration Number"
@@ -162,7 +162,7 @@ export function QuoteForm({ variant = "glass" }: { variant?: "glass" | "light" }
               hasError={Boolean(errors.registrationNo)}
               {...register("registrationNo", {
                 required: "Please enter the vehicle registration number",
-                pattern: { value: INDIA_REG_NO_PATTERN, message: "Enter a valid Indian registration number, e.g. MH12AB1234" },
+                pattern: { value: INDIA_REG_NO_PATTERN, message: "Enter a valid Indian registration number, e.g. UK12AB1234"},
                 setValueAs: (v: string) => v.toUpperCase(),
               })}
             />

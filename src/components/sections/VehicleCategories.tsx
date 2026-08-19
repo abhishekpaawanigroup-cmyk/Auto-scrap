@@ -14,7 +14,7 @@ const scrapCategories = [
 
 export function VehicleCategories() {
   return (
-    <section className="bg-gradient-to-r from-sky-50 via-primary-50/60 to-ink-100 py-20 sm:py-28">
+    <section className="bg-gradient-to-r from-primary-50 via-accent-500/10 to-ink-100 py-20 sm:py-28">
       <Container className="flex flex-col items-center gap-10">
         <Reveal className="max-w-2xl text-center">
           <h2 className="text-gradient-primary text-3xl font-bold leading-tight sm:text-4xl">
