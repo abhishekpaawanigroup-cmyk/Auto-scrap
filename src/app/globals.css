@@ -88,22 +88,33 @@
 }
 
 .theme-preview {
-  --color-primary-50:  #fef2ec;
-  --color-primary-100: #fce2d4;
-  --color-primary-200: #f8c9af;
-  --color-primary-300: #f8a172;
-  --color-primary-400: #fa7c38;
-  --color-primary-500: #ed5805;
-  --color-primary-600: #c74605;
-  --color-primary-700: #a23807;
-  --color-primary-800: #7d2b08;
-  --color-primary-900: #5e2008;
+  --color-primary-50:  #fefbeb;
+  --color-primary-100: #fdf5d3;
+  --color-primary-200: #fdefaf;
+  --color-primary-300: #fde681;
+  --color-primary-400: #fee267;
+  --color-primary-500: #fedd4e;
+  --color-primary-600: #f6c823;
+  --color-primary-700: #d09d11;
+  --color-primary-800: #9c7011;
+  --color-primary-900: #745011;
 
-  --color-accent-400: #f5b13d;
-  --color-accent-500: #f5970a;
-  --color-accent-600: #c2720a;
+  --color-accent-400: #fab338;
+  --color-accent-500: #eb8d0a;
+  --color-accent-600: #b8670a;
 
-  --shadow-glow: 0 0 0 1px rgb(237 88 5 / 0.25), 0 20px 40px -12px rgb(0 0 0 / 0.45);
+  --shadow-glow: 0 0 0 1px rgb(254 221 78 / 0.35), 0 20px 40px -12px rgb(0 0 0 / 0.45);
+
+  /* Yellow is a light, high-luminance hue — white text on primary-400..700
+     fails contrast, so force dark text wherever these fills are used. */
+  --color-on-primary: var(--color-ink-950);
+}
+
+.theme-preview .bg-primary-400,
+.theme-preview .bg-primary-500,
+.theme-preview .bg-primary-600,
+.theme-preview .bg-primary-700 {
+  color: var(--color-on-primary);
 }
 
 @layer utilities {
@@ -120,7 +131,7 @@
   }
 
   .text-gradient-primary {
-    background-image: linear-gradient(90deg, var(--color-primary-600), var(--color-accent-500));
+    background-image: linear-gradient(90deg, var(--color-primary-700), var(--color-primary-400));
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;

@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { Mail, MapPin, Phone, Clock } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { Container } from "@/components/ui/Container";
@@ -10,7 +9,6 @@ import { BackToTop } from "@/components/layout/BackToTop";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { NewsletterForm } from "@/components/layout/NewsletterForm";
 import { SITE_CONFIG } from "@/constants/site";
-import { cn } from "@/lib/utils";
 import navigation from "@/data/navigation.json";
 
 const socialLinks = [
@@ -21,11 +19,8 @@ const socialLinks = [
 ];
 
 export function Footer() {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
-
   return (
-    <footer className={cn("relative overflow-hidden bg-ink-950 text-ink-300", isHome && "theme-preview")}>
+    <footer className="relative overflow-hidden bg-ink-950 text-ink-300">
       <div className="absolute inset-0 bg-grid opacity-[0.03]" aria-hidden />
       <Container className="relative z-10 pt-16 pb-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_0.8fr_0.9fr_1.1fr_1.1fr]">

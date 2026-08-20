@@ -5,7 +5,7 @@ import { forwardRef } from "react";
 import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type Variant = "primary" | "secondary" | "outline" | "ghost" | "white";
+type Variant = "primary" | "secondary" | "outline" | "ghost" | "white" | "accent" | "outline-white";
 type Size = "sm" | "md" | "lg";
 
 const variantClasses: Record<Variant, string> = {
@@ -17,6 +17,10 @@ const variantClasses: Record<Variant, string> = {
     "border border-ink-200 text-ink-900 hover:border-primary-600 hover:text-primary-700 bg-white",
   ghost: "text-ink-900 hover:bg-ink-100",
   white: "bg-white text-ink-900 hover:bg-ink-100 shadow-[var(--shadow-premium)]",
+  accent:
+    "bg-accent-500 text-ink-950 shadow-[var(--shadow-glow)] hover:bg-accent-600 focus-visible:outline-accent-500",
+  "outline-white":
+    "bg-transparent border border-white/60 text-white hover:bg-white hover:text-ink-900 focus-visible:outline-white",
 };
 
 const sizeClasses: Record<Size, string> = {

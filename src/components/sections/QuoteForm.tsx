@@ -52,8 +52,8 @@ export function QuoteForm({ variant = "glass" }: { variant?: "glass" | "light" }
     <div
       className={
         isGlass
-          ? "w-full max-w-md rounded-3xl border border-white/10 bg-ink-950/95 p-7 shadow-[var(--shadow-premium-lg)] backdrop-blur-xl sm:p-8"
-          : "w-full max-w-md rounded-3xl border border-border bg-white p-7 shadow-[var(--shadow-premium-lg)] sm:p-8"
+          ? "w-full max-w-md rounded-2xl border border-white/10 bg-ink-950/95 p-7 shadow-[var(--shadow-premium-lg)] backdrop-blur-xl sm:p-8"
+          : "w-full max-w-md rounded-2xl border border-border bg-white p-7 shadow-[var(--shadow-premium-lg)] sm:p-8"
       }
     >
       <div className="text-center">

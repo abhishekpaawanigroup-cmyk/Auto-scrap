@@ -7,35 +7,47 @@ import { AnimatePresence, motion } from "framer-motion";
 import { Phone, X } from "lucide-react";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
 import { Button } from "@/components/ui/Button";
+import { useQuoteModal } from "@/components/layout/QuoteModalProvider";
 import { SITE_CONFIG } from "@/constants/site";
 import navigation from "@/data/navigation.json";
 import type { NavLink } from "@/types";
 import { cn } from "@/lib/utils";
 
-export function AnimatedHamburger({ open, onClick }: { open: boolean; onClick: () => void }) {
+export function AnimatedHamburger({
+  open,
+  onClick,
+  light = false,
+}: {
+  open: boolean;
+  onClick: () => void;
+  light?: boolean;
+}) {
   return (
     <button
       type="button"
       onClick={onClick}
       aria-label={open ? "Close menu" : "Open menu"}
       aria-expanded={open}
-      className="relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-ink-200 lg:hidden"
+      className={cn(
+        "relative flex h-11 w-11 shrink-0 items-center justify-center rounded-full border lg:hidden",
+        light ? "border-white/40" : "border-ink-200"
+      )}
     >
       <span className="relative flex h-4 w-5 flex-col justify-between">
         <motion.span
           animate={{ rotate: open ? 45 : 0, y: open ? 7 : 0 }}
           transition={{ duration: 0.25 }}
-          className="h-[2px] w-full origin-center rounded bg-ink-900"
+          className={cn("h-[2px] w-full origin-center rounded", light ? "bg-white" : "bg-ink-900")}
         />
         <motion.span
           animate={{ opacity: open ? 0 : 1 }}
           transition={{ duration: 0.15 }}
-          className="h-[2px] w-full rounded bg-ink-900"
+          className={cn("h-[2px] w-full rounded", light ? "bg-white" : "bg-ink-900")}
         />
         <motion.span
           animate={{ rotate: open ? -45 : 0, y: open ? -7 : 0 }}
           transition={{ duration: 0.25 }}
-          className="h-[2px] w-full origin-center rounded bg-ink-900"
+          className={cn("h-[2px] w-full origin-center rounded", light ? "bg-white" : "bg-ink-900")}
         />
       </span>
     </button>
@@ -44,6 +56,7 @@ export function AnimatedHamburger({ open, onClick }: { open: boolean; onClick: (
 
 export function MobileNav({ open, onClose }: { open: boolean; onClose: () => void }) {
   const pathname = usePathname();
+  const { openQuoteModal } = useQuoteModal();
   useLockBodyScroll(open);
 
   return (
@@ -109,7 +122,15 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
               >
                 Call Us Now
               </Button>
-              <Button href="/contact" variant="primary" className="w-full" onClick={onClose}>
+              <Button
+                type="button"
+                variant="primary"
+                className="w-full"
+                onClick={() => {
+                  onClose();
+                  openQuoteModal();
+                }}
+              >
                 Get Instant Quote
               </Button>
             </div>

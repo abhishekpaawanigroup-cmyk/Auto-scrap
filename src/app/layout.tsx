@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Inter, Manrope } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { QuoteModalProvider } from "@/components/layout/QuoteModalProvider";
 import { SITE_CONFIG } from "@/constants/site";
 import { organizationJsonLd } from "@/lib/seo";
 import "./globals.css";
@@ -55,20 +56,22 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#14b352",
+  themeColor: "#f6c823",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${inter.variable} ${manrope.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col bg-surface text-ink-900">
+      <body className="theme-preview flex min-h-full flex-col bg-surface text-ink-900">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
         />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <QuoteModalProvider>
+          <Header />
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </QuoteModalProvider>
       </body>
     </html>
   );
