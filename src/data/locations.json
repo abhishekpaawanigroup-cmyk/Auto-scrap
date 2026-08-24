@@ -1,0 +1,30 @@
+[
+  {
+    "id": "loc1",
+    "city": "Delhi",
+    "region": "Delhi NCR",
+    "description": "Doorstep pickup and authorized scrapping across the capital region, including Gurugram and Noida.",
+    "status": "Live"
+  },
+  {
+    "id": "loc2",
+    "city": "Lucknow",
+    "region": "Uttar Pradesh",
+    "description": "Certified vehicle recovery and RTO documentation support for Lucknow and surrounding districts.",
+    "status": "Live"
+  },
+  {
+    "id": "loc3",
+    "city": "Dehradun",
+    "region": "Uttarakhand",
+    "description": "Reliable pickup scheduling and eco-friendly recycling for the Doon valley and nearby towns.",
+    "status": "Live"
+  },
+  {
+    "id": "loc4",
+    "city": "Roorkee",
+    "region": "Uttarakhand",
+    "description": "Local pickup partners and transparent valuation for vehicle owners across Roorkee.",
+    "status": "Live"
+  }
+]

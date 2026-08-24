@@ -7,9 +7,10 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/f
 import { Container } from "@/components/ui/Container";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
-import { NewsletterForm } from "@/components/layout/NewsletterForm";
 import { SITE_CONFIG } from "@/constants/site";
 import navigation from "@/data/navigation.json";
+import locations from "@/data/locations.json";
+import type { ServiceLocation } from "@/types";
 
 const socialLinks = [
   { href: SITE_CONFIG.social.facebook, icon: FaFacebookF, label: "Facebook" },
@@ -23,7 +24,7 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-ink-950 text-ink-300">
       <div className="absolute inset-0 bg-grid opacity-[0.03]" aria-hidden />
       <Container className="relative z-10 pt-16 pb-8">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_0.8fr_0.9fr_1.1fr_1.1fr]">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_0.8fr_0.9fr_0.9fr_1.1fr]">
           <div className="flex flex-col gap-5">
             <div className="w-fit rounded-xl p-2">
               <Image
@@ -58,16 +59,33 @@ export function Footer() {
           <FooterColumn title="Our Services" links={navigation.footerServices} />
 
           <div className="flex flex-col gap-4">
-            <h4 className="text-sm font-bold uppercase tracking-wide text-white">Contact Us</h4>
-            <a href={`https://maps.google.com`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-sm text-ink-400 hover:text-white">
+            <h4 className="relative w-fit pb-2 text-sm font-bold uppercase tracking-wide text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-8 after:rounded-full after:bg-accent-500">Service Locations</h4>
+            <ul className="flex flex-col gap-3">
+              {(locations as ServiceLocation[]).map((location) => (
+                <li key={location.id}>
+                  <a
+                    href={`tel:${SITE_CONFIG.contact.phoneRaw}`}
+                    className="flex items-center gap-2.5 text-sm text-ink-400 transition-colors hover:text-accent-400"
+                  >
+                    <MapPin className="h-3.5 w-3.5 shrink-0 text-accent-500" />
+                    {location.city}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            <h4 className="relative w-fit pb-2 text-sm font-bold uppercase tracking-wide text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-8 after:rounded-full after:bg-accent-500">Contact Us</h4>
+            <a href={`https://maps.google.com`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-sm text-ink-400 transition-colors hover:text-accent-400">
               <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" />
               {SITE_CONFIG.contact.address}
             </a>
-            <a href={`tel:${SITE_CONFIG.contact.phoneRaw}`} className="flex items-center gap-3 text-sm text-ink-400 hover:text-white">
+            <a href={`tel:${SITE_CONFIG.contact.phoneRaw}`} className="flex items-center gap-3 text-sm text-ink-400 transition-colors hover:text-accent-400">
               <Phone className="h-4 w-4 shrink-0 text-accent-500" />
               {SITE_CONFIG.contact.phone}
             </a>
-            <a href={`mailto:${SITE_CONFIG.contact.email}`} className="flex items-center gap-3 text-sm text-ink-400 hover:text-white">
+            <a href={`mailto:${SITE_CONFIG.contact.email}`} className="flex items-center gap-3 text-sm text-ink-400 transition-colors hover:text-accent-400">
               <Mail className="h-4 w-4 shrink-0 text-accent-500" />
               {SITE_CONFIG.contact.email}
             </a>
@@ -75,14 +93,6 @@ export function Footer() {
               <Clock className="h-4 w-4 shrink-0 text-accent-500" />
               {SITE_CONFIG.contact.hours}
             </p>
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <h4 className="text-sm font-bold uppercase tracking-wide text-white">Newsletter</h4>
-            <p className="text-sm leading-relaxed text-ink-400">
-              Subscribe for scrapping tips, policy updates, and recycling news.
-            </p>
-            <NewsletterForm />
           </div>
         </div>
 
@@ -92,7 +102,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-6 text-xs">
             {navigation.legalLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-ink-500 hover:text-white">
+              <Link key={link.href} href={link.href} className="text-ink-500 transition-colors hover:text-accent-400">
                 {link.label}
               </Link>
             ))}
@@ -114,11 +124,11 @@ function FooterColumn({
 }) {
   return (
     <div className="flex flex-col gap-4">
-      <h4 className="text-sm font-bold uppercase tracking-wide text-white">{title}</h4>
+      <h4 className="relative w-fit pb-2 text-sm font-bold uppercase tracking-wide text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-8 after:rounded-full after:bg-accent-500">{title}</h4>
       <ul className="flex flex-col gap-3">
         {links.map((link) => (
           <li key={link.href}>
-            <Link href={link.href} className="text-sm text-ink-400 transition-colors hover:text-white">
+            <Link href={link.href} className="text-sm text-ink-400 transition-colors hover:text-accent-400">
               {link.label}
             </Link>
           </li>

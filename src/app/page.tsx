@@ -1,11 +1,16 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
+import { TrustStrip } from "@/components/sections/TrustStrip";
 import { ServiceAvailability } from "@/components/sections/ServiceAvailability";
-import { VehicleCategories } from "@/components/sections/VehicleCategories";
 import { StatsSection } from "@/components/sections/StatsSection";
+import { ServicesSection } from "@/components/sections/ServicesSection";
+import { VehicleCategories } from "@/components/sections/VehicleCategories";
 import { ProcessSection } from "@/components/sections/ProcessSection";
+import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
 import { TraceabilitySection } from "@/components/sections/traceability/TraceabilitySection";
 import { ProcessGallery } from "@/components/sections/ProcessGallery";
+import { EnvironmentalImpact } from "@/components/sections/EnvironmentalImpact";
+import { ServiceLocations } from "@/components/sections/ServiceLocations";
 import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTABanner } from "@/components/ui/CTABanner";
@@ -27,15 +32,23 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd(faqs)) }}
       />
       <Hero />
+      <TrustStrip />
       <ServiceAvailability />
-      <VehicleCategories />
       <StatsSection />
+      <ServicesSection />
+      <VehicleCategories />
       <ProcessSection />
+      <WhyChooseUs />
       <TraceabilitySection />
       <ProcessGallery />
+      <EnvironmentalImpact />
+      <ServiceLocations />
       <TestimonialsSection />
       <FAQSection />
-      <CTABanner />
+      <CTABanner
+        title="Give Your Old Vehicle a Responsible New Beginning"
+        description="Book a free pickup today and let our certified team handle the paperwork, valuation, and recycling - start to finish."
+      />
     </>
   );
 }

@@ -20,8 +20,8 @@ export function ServiceAvailability() {
   }
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-white py-20 sm:py-28">
-      <div className="absolute -left-24 -top-24 h-72 w-72 rounded-full bg-primary-400/15 blur-[120px]" aria-hidden />
+    <section className="relative overflow-hidden py-20 sm:py-28">
+      
       <div className="absolute -right-24 bottom-0 h-80 w-80 rounded-full bg-accent-400/15 blur-[130px]" aria-hidden />
 
       <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-16">

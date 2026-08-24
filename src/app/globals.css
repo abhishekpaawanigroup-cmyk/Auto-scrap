@@ -1,41 +1,41 @@
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette */
- --color-primary-50:  #eefcf3;
---color-primary-100: #d9f7e5;
---color-primary-200: #baeece;
---color-primary-300: #8ae0ab;
---color-primary-400: #49d47f;
---color-primary-500: #14b352;
---color-primary-600: #0c9741;
---color-primary-700: #0a7b37;
---color-primary-800: #0b602e;
---color-primary-900: #0b4c27;
+  /* Brand palette - inspired by the Wastia reference template */
+  --color-primary-50:  #eef8ec;
+  --color-primary-100: #d7f0e4;
+  --color-primary-200: #b3e0bf;
+  --color-primary-300: #86cd94;
+  --color-primary-400: #4bb35f;
+  --color-primary-500: #279a2c;
+  --color-primary-600: #1a7e00;
+  --color-primary-700: #0e6118;
+  --color-primary-800: #03452f;
+  --color-primary-900: #012217;
 
- --color-accent-400: #39c6a3;
---color-accent-500: #14a380;
---color-accent-600: #0d8267;
+  --color-accent-400: #f0be3d;
+  --color-accent-500: #e4a400;
+  --color-accent-600: #b98400;
 
   --color-ink-50:  #f6f9f8;
---color-ink-100: #eaf0ee;
---color-ink-200: #d6e0dd;
---color-ink-300: #bac9c3;
---color-ink-400: #8b9c95;
---color-ink-500: #677971;
---color-ink-600: #4e5f58;
---color-ink-700: #3a4a44;
---color-ink-800: #273530;
---color-ink-900: #192420;
---color-ink-950: #101816;
+  --color-ink-100: #eaf0ee;
+  --color-ink-200: #d6e0dd;
+  --color-ink-300: #bac9c3;
+  --color-ink-400: #8b9c95;
+  --color-ink-500: #677971;
+  --color-ink-600: #4e5f58;
+  --color-ink-700: #3a4a44;
+  --color-ink-800: #1c2e27;
+  --color-ink-900: #0e2117;
+  --color-ink-950: #051911;
 
-  --color-surface: #f6faf8;
---color-card: #ffffff;
---color-border: #d6e0dd;
+  --color-surface: #f7faf8;
+  --color-card: #ffffff;
+  --color-border: #d6e0dd;
 
   /* Typography */
-  --font-display: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fira-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-roboto), ui-sans-serif, system-ui, sans-serif;
 
   /* Radii */
   --radius-xl: 1rem;
@@ -45,7 +45,7 @@
   /* Shadows */
   --shadow-premium: 0 1px 2px 0 rgb(17 24 39 / 0.04), 0 12px 32px -8px rgb(17 24 39 / 0.10);
   --shadow-premium-lg: 0 4px 12px 0 rgb(17 24 39 / 0.05), 0 32px 64px -16px rgb(17 24 39 / 0.18);
-  --shadow-glow: 0 0 0 1px rgb(20 179 82 / 0.25), 0 20px 40px -12px rgb(0 0 0 / 0.45);
+  --shadow-glow: 0 0 0 1px rgb(26 126 0 / 0.25), 0 20px 40px -12px rgb(0 0 0 / 0.45);
 
   /* Easing */
   --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
@@ -71,7 +71,6 @@
 
   html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
   }
 
   body {
@@ -85,36 +84,6 @@
     font-family: var(--font-display);
     letter-spacing: -0.02em;
   }
-}
-
-.theme-preview {
-  --color-primary-50:  #fefbeb;
-  --color-primary-100: #fdf5d3;
-  --color-primary-200: #fdefaf;
-  --color-primary-300: #fde681;
-  --color-primary-400: #fee267;
-  --color-primary-500: #fedd4e;
-  --color-primary-600: #f6c823;
-  --color-primary-700: #d09d11;
-  --color-primary-800: #9c7011;
-  --color-primary-900: #745011;
-
-  --color-accent-400: #fab338;
-  --color-accent-500: #eb8d0a;
-  --color-accent-600: #b8670a;
-
-  --shadow-glow: 0 0 0 1px rgb(254 221 78 / 0.35), 0 20px 40px -12px rgb(0 0 0 / 0.45);
-
-  /* Yellow is a light, high-luminance hue — white text on primary-400..700
-     fails contrast, so force dark text wherever these fills are used. */
-  --color-on-primary: var(--color-ink-950);
-}
-
-.theme-preview .bg-primary-400,
-.theme-preview .bg-primary-500,
-.theme-preview .bg-primary-600,
-.theme-preview .bg-primary-700 {
-  color: var(--color-on-primary);
 }
 
 @layer utilities {

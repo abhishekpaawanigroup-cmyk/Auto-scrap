@@ -132,6 +132,14 @@ export interface TraceabilityBadge {
   position: "top-left" | "top-right" | "bottom-left" | "bottom-right";
 }
 
+export interface ServiceLocation {
+  id: string;
+  city: string;
+  region: string;
+  description: string;
+  status: "Live" | "Expanding";
+}
+
 export interface TraceabilityCheckpoint {
   id: number;
   number: string;

@@ -12,7 +12,7 @@ export function CTABanner({
   description?: string;
 }) {
   return (
-    <section className="relative overflow-hidden bg-[#120b0b] py-20 sm:py-24">
+    <section className="relative overflow-hidden bg-ink-950 py-20 sm:py-24">
       <div className="absolute inset-0 bg-grid opacity-[0.04]" aria-hidden />
       <div
         className="absolute -left-32 top-1/2 h-96 w-96 -translate-y-1/2 rounded-full bg-primary-600/25 blur-3xl"

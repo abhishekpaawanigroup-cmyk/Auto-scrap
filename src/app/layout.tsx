@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Manrope } from "next/font/google";
+import { Fira_Sans, Roboto } from "next/font/google";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { QuoteModalProvider } from "@/components/layout/QuoteModalProvider";
@@ -7,14 +7,16 @@ import { SITE_CONFIG } from "@/constants/site";
 import { organizationJsonLd } from "@/lib/seo";
 import "./globals.css";
 
-const inter = Inter({
-  variable: "--font-inter",
+const roboto = Roboto({
+  variable: "--font-roboto",
+  weight: ["400", "500", "700"],
   subsets: ["latin"],
   display: "swap",
 });
 
-const manrope = Manrope({
-  variable: "--font-manrope",
+const firaSans = Fira_Sans({
+  variable: "--font-fira-sans",
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
   display: "swap",
 });
@@ -56,13 +58,13 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  themeColor: "#f6c823",
+  themeColor: "#1a7e00",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${inter.variable} ${manrope.variable} h-full antialiased`}>
-      <body className="theme-preview flex min-h-full flex-col bg-surface text-ink-900">
+    <html lang="en" className={`${roboto.variable} ${firaSans.variable} h-full antialiased`}>
+      <body className="flex min-h-full flex-col bg-surface text-ink-900">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd()) }}
