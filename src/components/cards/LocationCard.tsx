@@ -4,26 +4,44 @@ import type { ServiceLocation } from "@/types";
 
 export function LocationCard({ location }: { location: ServiceLocation }) {
   return (
-    <div className="group flex h-full flex-col rounded-xl border border-border bg-white p-7 shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:border-primary-200 hover:shadow-[var(--shadow-premium-lg)]">
-      <div className="flex items-start justify-between gap-3">
-        <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors duration-300 group-hover:bg-primary-600 group-hover:text-white">
-          <MapPin className="h-6 w-6" strokeWidth={1.75} />
-        </span>
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-primary-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-primary-700">
-          <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
-          {location.status}
-        </span>
+    <div className="group relative flex h-full flex-col overflow-hidden rounded-xl border border-border bg-white p-7 shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:border-primary-600 hover:shadow-[var(--shadow-premium-lg)]">
+      <div
+        className="absolute inset-0 origin-left scale-x-0 bg-primary-600 transition-transform duration-500 ease-[var(--ease-premium)] group-hover:scale-x-100"
+        aria-hidden
+      />
+      <div
+        className="bg-pattern-diagonal pointer-events-none absolute inset-0 origin-left scale-x-0 opacity-0 transition-[transform,opacity] duration-500 ease-[var(--ease-premium)] group-hover:scale-x-100 group-hover:opacity-100"
+        aria-hidden
+      />
+
+      <div className="relative z-10 flex h-full flex-col">
+        <div className="flex items-start justify-between gap-3">
+          <MapPin
+            className="h-10 w-10 text-primary-600 transition-colors duration-300 group-hover:text-white"
+            strokeWidth={1.5}
+          />
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-primary-50 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-primary-700 transition-colors duration-300 group-hover:bg-white/15 group-hover:text-white">
+            <span className="h-1.5 w-1.5 rounded-full bg-primary-500 transition-colors duration-300 group-hover:bg-white" />
+            {location.status}
+          </span>
+        </div>
+        <h3 className="mt-5 text-xl font-bold text-ink-900 transition-colors duration-300 group-hover:text-white">
+          {location.city}
+        </h3>
+        <p className="text-sm font-semibold text-primary-600 transition-colors duration-300 group-hover:text-white/90">
+          {location.region}
+        </p>
+        <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-500 transition-colors duration-300 group-hover:text-white/85">
+          {location.description}
+        </p>
+        <a
+          href={`tel:${SITE_CONFIG.contact.phoneRaw}`}
+          className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-700 transition-colors duration-300 group-hover:text-white"
+        >
+          <Phone className="h-4 w-4" />
+          Call This Location
+        </a>
       </div>
-      <h3 className="mt-5 text-xl font-bold text-ink-900">{location.city}</h3>
-      <p className="text-sm font-semibold text-primary-600">{location.region}</p>
-      <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-500">{location.description}</p>
-      <a
-        href={`tel:${SITE_CONFIG.contact.phoneRaw}`}
-        className="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-primary-700 transition-colors hover:text-primary-800"
-      >
-        <Phone className="h-4 w-4" />
-        Call This Location
-      </a>
     </div>
   );
 }
