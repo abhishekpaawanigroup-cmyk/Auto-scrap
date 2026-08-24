@@ -77,14 +77,14 @@ export function CertificateStage({ badges }: { badges: TraceabilityBadge[] }) {
               cy="17"
               r="15"
               fill="none"
-              stroke="#dc2626"
+              className="stroke-primary-600"
               strokeWidth="2"
               variants={{ hidden: { pathLength: 0 }, visible: { pathLength: 1, transition: { duration: 1 } } }}
             />
             <motion.path
               d="M10,17 L15,22 L24,12"
               fill="none"
-              stroke="#dc2626"
+              className="stroke-primary-600"
               strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -108,7 +108,7 @@ export function CutStage({ badges }: { badges: TraceabilityBadge[] }) {
         <VehicleVerificationSVG className="w-full" />
         <motion.div
           className="pointer-events-none absolute left-[6%] right-[6%] top-1/2 h-0.5 -translate-y-1/2 bg-gradient-to-r from-transparent via-primary-600 to-transparent"
-          style={{ boxShadow: "0 0 12px 2px rgba(220,38,38,0.55)" }}
+          style={{ boxShadow: "0 0 12px 2px rgba(26,126,0,0.55)" }}
           initial={{ scaleX: 0, opacity: 0 }}
           animate={{ scaleX: [0, 1, 1, 0], opacity: [0, 1, 1, 0] }}
           transition={{ duration: 3.2, repeat: Infinity, times: [0, 0.35, 0.75, 1], ease: "easeInOut" }}
@@ -147,7 +147,7 @@ export function MaterialStage({ badges }: { badges: TraceabilityBadge[] }) {
               y1="50"
               x2={node.x}
               y2={node.y}
-              stroke="#dc2626"
+              className="stroke-primary-600"
               strokeWidth="0.6"
               strokeDasharray="2 2"
               initial={{ pathLength: 0, opacity: 0 }}
@@ -159,7 +159,7 @@ export function MaterialStage({ badges }: { badges: TraceabilityBadge[] }) {
               }}
             />
           ))}
-          <circle cx="50" cy="50" r="3.5" fill="#dc2626" />
+          <circle cx="50" cy="50" r="3.5" className="fill-primary-600" />
         </svg>
         {materialNodes.map((node, index) => (
           <motion.div
@@ -170,7 +170,7 @@ export function MaterialStage({ badges }: { badges: TraceabilityBadge[] }) {
             className="absolute flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-1"
             style={{ left: `${node.x}%`, top: `${node.y}%` }}
           >
-            <span className="h-3 w-3 rounded-full border-2 border-primary-500 bg-white shadow-[0_0_0_4px_rgba(220,38,38,0.15)]" />
+            <span className="h-3 w-3 rounded-full border-2 border-primary-500 bg-white shadow-[0_0_0_4px_rgba(26,126,0,0.15)]" />
             <span className="whitespace-nowrap rounded-full bg-white px-2 py-0.5 text-[9px] font-bold uppercase tracking-wide text-ink-600 shadow-sm">
               {node.label}
             </span>
@@ -193,14 +193,14 @@ export function ArchiveStage({ badges }: { badges: TraceabilityBadge[] }) {
           animate={{ rotate: 360 }}
           transition={{ duration: 9, repeat: Infinity, ease: "linear" }}
         >
-          <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-primary-500 shadow-[0_0_8px_2px_rgba(242,69,74,0.5)]" />
+          <span className="absolute left-1/2 top-0 h-2.5 w-2.5 -translate-x-1/2 rounded-full bg-primary-500 shadow-[0_0_8px_2px_rgba(39,154,44,0.5)]" />
         </motion.div>
         <motion.div
           className="absolute inset-0"
           animate={{ rotate: -360 }}
           transition={{ duration: 13, repeat: Infinity, ease: "linear" }}
         >
-          <span className="absolute left-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-primary-300 shadow-[0_0_6px_2px_rgba(254,159,156,0.5)]" />
+          <span className="absolute left-0 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-primary-300 shadow-[0_0_6px_2px_rgba(134,205,148,0.5)]" />
         </motion.div>
         <svg viewBox="0 0 120 120" className="h-[70%] w-[70%]">
           <ellipse cx="60" cy="30" rx="34" ry="12" className="fill-white stroke-ink-800" strokeWidth="2.5" />

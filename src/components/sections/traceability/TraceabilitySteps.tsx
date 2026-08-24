@@ -55,7 +55,7 @@ export function TraceabilitySteps({
               className={cn(
                 "flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-xs font-semibold transition-all duration-300",
                 isActive
-                  ? "border-primary-500 bg-primary-50 text-primary-700 shadow-[0_0_0_4px_rgba(220,38,38,0.12)]"
+                  ? "border-primary-500 bg-primary-50 text-primary-700 shadow-[0_0_0_4px_rgba(26,126,0,0.12)]"
                   : "border-ink-200 bg-white text-ink-500"
               )}
             >
@@ -94,7 +94,7 @@ export function TraceabilitySteps({
         >
           <motion.span
             className="absolute top-1/2 h-2.5 w-2.5 -translate-y-1/2 rounded-full bg-primary-500"
-            style={{ boxShadow: "0 0 10px 3px rgba(220,38,38,0.55)" }}
+            style={{ boxShadow: "0 0 10px 3px rgba(26,126,0,0.55)" }}
             initial={false}
             animate={{ left: `${progress * 100}%`, opacity: isTraveling ? 1 : 0 }}
             transition={{
@@ -127,7 +127,7 @@ export function TraceabilitySteps({
                         ? "border-primary-300 text-primary-500"
                         : "border-ink-200 text-ink-400 group-hover:border-primary-300 group-hover:text-primary-600"
                   )}
-                  style={isActive ? { boxShadow: "0 0 0 6px rgba(220,38,38,0.12)" } : undefined}
+                  style={isActive ? { boxShadow: "0 0 0 6px rgba(26,126,0,0.12)" } : undefined}
                 >
                   {isActive && (
                     <motion.span
