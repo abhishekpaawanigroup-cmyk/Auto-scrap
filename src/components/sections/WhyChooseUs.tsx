@@ -22,12 +22,23 @@ export function WhyChooseUs() {
             const Icon = getIcon(item.icon);
             return (
               <RevealItem key={item.id} direction="up">
-                <div className="group flex h-full flex-col gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:border-accent-500/40 hover:bg-white/[0.06]">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 text-accent-400 transition-colors group-hover:bg-accent-500 group-hover:text-ink-950">
-                    <Icon className="h-6 w-6" strokeWidth={1.75} />
-                  </span>
-                  <h3 className="text-base font-bold text-white">{item.title}</h3>
-                  <p className="text-sm leading-relaxed text-ink-400">{item.description}</p>
+                <div className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 ease-[var(--ease-premium)] hover:border-accent-600 hover:bg-accent-500 hover:shadow-[var(--shadow-premium-lg)]">
+                  <div
+                    className="bg-pattern-diagonal pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    aria-hidden
+                  />
+                  <div className="relative z-10 flex h-full flex-col gap-4">
+                    <Icon
+                      className="h-10 w-10 text-accent-400 transition-colors duration-300 group-hover:text-ink-950"
+                      strokeWidth={1.5}
+                    />
+                    <h3 className="text-base font-bold text-white transition-colors duration-300 group-hover:text-ink-950">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-ink-400 transition-colors duration-300 group-hover:text-ink-900">
+                      {item.description}
+                    </p>
+                  </div>
                 </div>
               </RevealItem>
             );
