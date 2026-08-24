@@ -43,7 +43,7 @@ export function VehicleCategories() {
                     <Icon className="h-7 w-7" strokeWidth={1.5} />
                   </span>
                   <span className="text-sm font-bold text-ink-900">{vehicle.name}</span>
-                  <span className="text-xs font-semibold text-primary-600 underline underline-offset-2 group-hover:text-primary-700">
+                  <span className="text-xs font-semibold text-primary-600 underline underline-offset-2 group-hover:text-primary-700 cursor-pointer">
                     Get Instant Quote
                   </span>
                 </button>
