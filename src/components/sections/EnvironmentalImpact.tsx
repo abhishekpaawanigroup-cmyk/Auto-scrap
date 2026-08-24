@@ -13,7 +13,11 @@ import type { EnvironmentalStat } from "@/types";
 export function EnvironmentalImpact() {
   return (
     <section className="relative overflow-hidden bg-ink-950 py-20 sm:py-28">
-      <div className="absolute inset-0 bg-grid opacity-[0.05]" aria-hidden />
+      <div className="bg-plus-grid absolute inset-0" aria-hidden />
+      <div
+        className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,var(--color-ink-950)_88%)]"
+        aria-hidden
+      />
       <Container className="relative z-10">
         <SectionTitle
           eyebrow="Environmental Impact"
@@ -38,7 +42,7 @@ function ImpactCard({ stat, delay }: { stat: EnvironmentalStat; delay: number })
 
   return (
     <Reveal delay={delay}>
-      <div ref={ref} className="flex flex-col gap-4 rounded-xl border border-white/10 bg-white/[0.04] p-6">
+      <div ref={ref} className="relative z-10 flex flex-col gap-4 rounded-xl border border-white/10 bg-ink-900 p-6">
         <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-accent-400">
           <Icon className="h-6 w-6" strokeWidth={1.75} />
         </span>
