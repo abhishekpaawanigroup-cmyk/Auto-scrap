@@ -26,7 +26,7 @@ export function ServiceAvailability() {
 
       <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2 lg:gap-16">
         <Reveal direction="left" className="relative">
-          <div className="relative mx-auto max-w-md rounded-3xl border border-border bg-white/70 p-4 shadow-[var(--shadow-premium-lg)] backdrop-blur-sm sm:max-w-lg">
+          <div className="relative mx-auto max-w-md rounded-xl border border-border bg-white/70 p-4 shadow-[var(--shadow-premium-lg)] backdrop-blur-sm sm:max-w-lg">
             <Image
               src="/images/map.png"
               alt="Carcrush24 service network across India"
@@ -68,7 +68,7 @@ export function ServiceAvailability() {
 
           <form
             onSubmit={handleSubmit}
-            className="mt-8 max-w-md rounded-3xl border border-border bg-white p-6 shadow-[var(--shadow-premium)] sm:p-7"
+            className="mt-8 max-w-md rounded-xl border border-border bg-white p-6 shadow-[var(--shadow-premium)] sm:p-7"
           >
             <h3 className="text-lg font-bold text-ink-900">Check Service Availability</h3>
             <p className="mt-1 text-sm text-ink-500">We&apos;re expanding fast — see if we serve your area.</p>

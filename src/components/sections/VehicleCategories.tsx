@@ -37,7 +37,7 @@ export function VehicleCategories() {
                 <button
                   type="button"
                   onClick={openQuoteModal}
-                  className="group flex h-full w-full flex-col items-center gap-3 rounded-2xl bg-white/80 px-4 py-7 text-center shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:shadow-[var(--shadow-premium-lg)]"
+                  className="group flex h-full w-full flex-col items-center gap-3 rounded-xl bg-white/80 px-4 py-7 text-center shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:shadow-[var(--shadow-premium-lg)]"
                 >
                   <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary-50 text-primary-600 transition-colors duration-300 group-hover:bg-primary-600 group-hover:text-white">
                     <Icon className="h-7 w-7" strokeWidth={1.5} />

@@ -17,7 +17,7 @@ export function Accordion({ items }: { items: FAQ[] }) {
           <div
             key={item.id}
             className={cn(
-              "overflow-hidden rounded-2xl border bg-white transition-colors duration-300",
+              "overflow-hidden rounded-xl border bg-white transition-colors duration-300",
               isOpen ? "border-primary-200 shadow-[var(--shadow-premium)]" : "border-border"
             )}
           >

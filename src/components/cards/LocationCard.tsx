@@ -4,7 +4,7 @@ import type { ServiceLocation } from "@/types";
 
 export function LocationCard({ location }: { location: ServiceLocation }) {
   return (
-    <div className="group flex h-full flex-col rounded-2xl border border-border bg-white p-7 shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:border-primary-200 hover:shadow-[var(--shadow-premium-lg)]">
+    <div className="group flex h-full flex-col rounded-xl border border-border bg-white p-7 shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:border-primary-200 hover:shadow-[var(--shadow-premium-lg)]">
       <div className="flex items-start justify-between gap-3">
         <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary-50 text-primary-600 transition-colors duration-300 group-hover:bg-primary-600 group-hover:text-white">
           <MapPin className="h-6 w-6" strokeWidth={1.75} />

@@ -3,7 +3,7 @@ import type { Testimonial } from "@/types";
 
 export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <div className="relative flex h-full flex-col items-center rounded-2xl bg-ink-100 px-6 pb-8 pt-14 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:px-8">
+    <div className="relative flex h-full flex-col items-center rounded-xl bg-ink-100 px-6 pb-8 pt-14 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-lg sm:px-8">
       <Image
         src={testimonial.image}
         alt={testimonial.name}

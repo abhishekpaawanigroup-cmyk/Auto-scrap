@@ -7,7 +7,7 @@ export function ServiceCard({ service }: { service: Service }) {
   const Icon = getIcon(service.icon);
 
   return (
-    <div className="group flex h-full flex-col rounded-2xl border border-border bg-white p-7 shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:border-primary-200 hover:shadow-[var(--shadow-premium-lg)]">
+    <div className="group flex h-full flex-col rounded-xl border border-border bg-white p-7 shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:border-primary-200 hover:shadow-[var(--shadow-premium-lg)]">
       <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-gradient-to-br from-primary-600 to-primary-800 text-white shadow-[var(--shadow-glow)]">
         <Icon className="h-7 w-7" strokeWidth={1.75} />
       </div>

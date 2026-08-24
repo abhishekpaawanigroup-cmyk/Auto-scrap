@@ -17,7 +17,7 @@ export function TrustStrip() {
       <Container>
         <RevealGroup
           staggerDelay={0.06}
-          className="grid grid-cols-2 gap-3 rounded-3xl border border-border bg-white/95 p-4 shadow-[var(--shadow-premium-lg)] backdrop-blur-sm sm:grid-cols-3 sm:gap-4 sm:p-6 lg:grid-cols-6"
+          className="grid grid-cols-2 gap-3 rounded-xl border border-border bg-white/95 p-4 shadow-[var(--shadow-premium-lg)] backdrop-blur-sm sm:grid-cols-3 sm:gap-4 sm:p-6 lg:grid-cols-6"
         >
           {benefits.map((benefit) => {
             const Icon = getIcon(benefit.icon);

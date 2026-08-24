@@ -126,7 +126,7 @@ export function Header() {
           </nav>
 
           <div className="hidden items-stretch gap-4 lg:flex">
-            <div className="flex items-center gap-4 rounded-2xl bg-primary-600 py-2.5 pl-5 pr-2.5">
+            <div className="flex items-center gap-4 rounded-lg bg-primary-600 py-2.5 pl-5 pr-2.5">
               <a
                 href={`tel:${SITE_CONFIG.contact.phoneRaw}`}
                 className="flex items-center gap-3 text-white transition-opacity hover:opacity-90"

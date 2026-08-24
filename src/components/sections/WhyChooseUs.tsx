@@ -22,7 +22,7 @@ export function WhyChooseUs() {
             const Icon = getIcon(item.icon);
             return (
               <RevealItem key={item.id} direction="up">
-                <div className="group flex h-full flex-col gap-4 rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:border-accent-500/40 hover:bg-white/[0.06]">
+                <div className="group flex h-full flex-col gap-4 rounded-xl border border-white/10 bg-white/[0.03] p-6 transition-all duration-300 hover:border-accent-500/40 hover:bg-white/[0.06]">
                   <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/5 text-accent-400 transition-colors group-hover:bg-accent-500 group-hover:text-ink-950">
                     <Icon className="h-6 w-6" strokeWidth={1.75} />
                   </span>

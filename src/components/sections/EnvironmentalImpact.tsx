@@ -38,7 +38,7 @@ function ImpactCard({ stat, delay }: { stat: EnvironmentalStat; delay: number })
 
   return (
     <Reveal delay={delay}>
-      <div ref={ref} className="flex flex-col gap-4 rounded-2xl border border-white/10 bg-white/[0.04] p-6">
+      <div ref={ref} className="flex flex-col gap-4 rounded-xl border border-white/10 bg-white/[0.04] p-6">
         <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-white/10 text-accent-400">
           <Icon className="h-6 w-6" strokeWidth={1.75} />
         </span>
