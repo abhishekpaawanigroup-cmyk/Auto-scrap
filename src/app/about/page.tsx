@@ -28,7 +28,7 @@ export default function AboutPage() {
   return (
     <>
       <PageHero
-        eyebrow="About Vantage"
+        eyebrow="About CarCrush24"
         breadcrumb="About"
         title="Building India's Most Trusted Recovery Network"
         description="For over a decade, we've combined regulatory precision with genuine care for the environment - one vehicle at a time."
@@ -39,10 +39,10 @@ export default function AboutPage() {
           <Reveal direction="left">
             <div className="relative overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-premium-lg)]">
               <Image
-                src="/images/about/story.svg"
+                src="/images/about/story.png"
                 alt="Our story"
                 width={720}
-                height={560}
+                height={600}
                 priority
                 className="h-full w-full object-cover"
               />
@@ -54,18 +54,13 @@ export default function AboutPage() {
               Our Story
             </span>
             <h2 className="text-3xl font-bold text-ink-900 sm:text-4xl">
-              From a Single Yard to a Pan-India Network
+              Where Responsible Vehicle Recycling Begins
             </h2>
             <p className="text-[15px] leading-relaxed text-ink-500">
-              Carcrush24 began in 2013 with a simple observation: India&apos;s vehicle
-              scrapping industry was fragmented, informal, and often environmentally careless.
-              We set out to build something different - a certified, technology-enabled recovery
-              network that vehicle owners could actually trust.
+              At CarCrush24, we believe that vehicle scrapping should be simple, transparent, and environmentally responsible. Our mission is to make the end-of-life vehicle process easier for owners while ensuring every vehicle is handled through responsible recycling and recovery practices.
             </p>
             <p className="text-[15px] leading-relaxed text-ink-500">
-              Today, we operate as a government-authorized Registered Vehicle Scrapping Facility,
-              processing thousands of vehicles annually across more than 100 cities, while holding
-              ourselves to a standard of transparency the industry historically lacked.
+              From collection and dismantling to the recovery of reusable materials, we focus on creating a reliable and seamless experience at every step. By combining trusted processes with a commitment to sustainability, we aim to give old vehicles a responsible new purpose and contribute to a cleaner future.
             </p>
           </Reveal>
         </Container>
@@ -73,30 +68,75 @@ export default function AboutPage() {
 
       <section className="bg-white py-20 sm:py-24">
         <Container>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <Reveal direction="up" className="rounded-2xl border border-border bg-surface p-8">
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-primary-600 text-white shadow-[var(--shadow-glow)]">
-                <Target className="h-7 w-7" strokeWidth={1.75} />
-              </span>
-              <h3 className="mt-6 text-xl font-bold text-ink-900">Our Mission</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-ink-500">
-                To make responsible vehicle recovery the default choice for every Indian vehicle
-                owner - by removing the friction, opacity, and mistrust that has long defined the
-                scrapping industry.
-              </p>
-            </Reveal>
-            <Reveal direction="up" delay={0.1} className="rounded-2xl border border-border bg-surface p-8">
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-ink-900 text-white">
-                <EyeIcon className="h-7 w-7" strokeWidth={1.75} />
-              </span>
-              <h3 className="mt-6 text-xl font-bold text-ink-900">Our Vision</h3>
-              <p className="mt-3 text-[15px] leading-relaxed text-ink-500">
-                A future where every end-of-life vehicle in India is recovered through a certified
-                network - recapturing materials responsibly and measurably reducing the country&apos;s
-                automotive carbon footprint.
-              </p>
-            </Reveal>
-          </div>
+          <Reveal>
+            {/* Mobile: simple stacked cards */}
+            <div className="grid grid-cols-1 gap-6 sm:hidden">
+              <div className="rounded-2xl bg-gradient-to-br from-primary-700 via-primary-600 to-primary-500 p-8">
+                <h3 className="text-2xl font-bold uppercase leading-tight text-white">
+                  Our
+                  <br />
+                  Mission
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-white/85">
+                  Our vision is to build a cleaner and more sustainable future by transforming the way end-of-life vehicles are handled. We aim to create a responsible vehicle recycling ecosystem where every old vehicle is processed with care, valuable materials are recovered efficiently, and unnecessary waste is reduced.
+                </p>
+                <span className="mt-6 flex h-14 w-14 items-center justify-center rounded-full border-2 border-white/70 text-white">
+                  <Target className="h-7 w-7" strokeWidth={1.75} />
+                </span>
+              </div>
+              <div className="rounded-2xl border border-border bg-surface p-8">
+                <span className="flex h-14 w-14 items-center justify-center rounded-full bg-primary-600 text-white shadow-[var(--shadow-glow)]">
+                  <EyeIcon className="h-7 w-7" strokeWidth={1.75} />
+                </span>
+                <h3 className="mt-6 text-2xl font-bold uppercase leading-tight text-ink-900">
+                  Our
+                  <br />
+                  Vision
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-ink-500">
+                  To create a future where every end-of-life vehicle is handled through a responsible, transparent, and sustainable recycling process. We envision reducing automotive waste, recovering valuable materials efficiently, and contributing to a cleaner, greener future for generations to come.
+                </p>
+              </div>
+            </div>
+
+            {/* Tablet/Desktop: single diagonal-split card */}
+            <div className="relative hidden overflow-hidden rounded-2xl bg-white shadow-[var(--shadow-premium-lg)] sm:block">
+              <div
+                className="absolute inset-0 bg-gradient-to-br from-primary-700 via-primary-600 to-primary-500"
+                style={{ clipPath: "polygon(0% 0%, 66% 0%, 24% 100%, 0% 100%)" }}
+                aria-hidden
+              />
+              <div className="relative grid min-h-[380px] grid-cols-2 lg:min-h-[420px]">
+                <div className="relative z-10 flex flex-col justify-between p-10 sm:max-w-[70%] lg:p-14">
+                  <div>
+                    <h3 className="text-3xl font-bold uppercase leading-tight text-white lg:text-4xl">
+                      Our Mission
+                    </h3>
+                    <p className="mt-5 max-w-xs text-[15px] leading-relaxed text-white/85">
+                      To provide transparent, responsible, and hassle-free vehicle scrapping services that deliver maximum value to vehicle owners while ensuring environmentally conscious recycling and contributing to a cleaner, more sustainable future.
+                    </p>
+                  </div>
+                  <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full border-2 border-white/70 text-white">
+                    <Target className="h-8 w-8" strokeWidth={1.75} />
+                  </span>
+                </div>
+
+                <div className="relative z-10 ml-auto flex flex-col justify-between p-10 text-right sm:max-w-[75%] lg:p-14">
+                  <span className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-700 shadow-[var(--shadow-premium)]">
+                    <EyeIcon className="h-8 w-8" strokeWidth={1.75} />
+                  </span>
+                  <div>
+                    <h3 className="text-3xl text-left font-bold uppercase leading-tight text-ink-900 lg:text-4xl">
+                      Our Vision
+                    </h3>
+                    <p className="mt-5 ml-auto max-w-xs text-left text-[15px] leading-relaxed text-ink-500">
+                      To become India’s most trusted and preferred vehicle scrapping partner, setting new standards for responsible recycling, transparency, environmental sustainability, and an exceptional customer experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
         </Container>
       </section>
 
@@ -112,12 +152,24 @@ export default function AboutPage() {
               const Icon = getIcon(value.icon);
               return (
                 <RevealItem key={value.id} direction="up">
-                  <div className="flex h-full flex-col gap-4 rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-premium)]">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-700">
+                  <div className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:border-primary-600 hover:shadow-[var(--shadow-premium-lg)] active:border-primary-600 active:shadow-[var(--shadow-premium-lg)]">
+                    <div
+                      className="absolute inset-0 origin-top-left scale-0 bg-primary-600 transition-transform duration-500 ease-[var(--ease-premium)] group-hover:scale-100 group-active:scale-100"
+                      aria-hidden
+                    />
+                    <div
+                      className="bg-pattern-diagonal pointer-events-none absolute inset-0 origin-top-left scale-0 opacity-0 transition-[transform,opacity] duration-500 ease-[var(--ease-premium)] group-hover:scale-100 group-hover:opacity-100 group-active:scale-100 group-active:opacity-100"
+                      aria-hidden
+                    />
+                    <span className="relative z-10 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary-700 transition-colors duration-300 group-hover:bg-white/15 group-hover:text-white group-active:bg-white/15 group-active:text-white">
                       <Icon className="h-6 w-6" strokeWidth={1.75} />
                     </span>
-                    <h3 className="text-base font-bold text-ink-900">{value.title}</h3>
-                    <p className="text-sm leading-relaxed text-ink-500">{value.description}</p>
+                    <h3 className="relative z-10 text-base font-bold text-ink-900 transition-colors duration-300 group-hover:text-white group-active:text-white">
+                      {value.title}
+                    </h3>
+                    <p className="relative z-10 text-sm leading-relaxed text-ink-500 transition-colors duration-300 group-hover:text-white/85 group-active:text-white/85">
+                      {value.description}
+                    </p>
                   </div>
                 </RevealItem>
               );
