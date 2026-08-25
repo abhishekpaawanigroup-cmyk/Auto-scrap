@@ -32,6 +32,7 @@ export default function AboutPage() {
         breadcrumb="About"
         title="Building India's Most Trusted Recovery Network"
         description="For over a decade, we've combined regulatory precision with genuine care for the environment - one vehicle at a time."
+        backgroundImage="/images/about/hero.png"
       />
 
       <section className="bg-surface py-20 sm:py-28">
@@ -152,7 +153,7 @@ export default function AboutPage() {
               const Icon = getIcon(value.icon);
               return (
                 <RevealItem key={value.id} direction="up">
-                  <div className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:border-primary-600 hover:shadow-[var(--shadow-premium-lg)] active:border-primary-600 active:shadow-[var(--shadow-premium-lg)]">
+                  <div className="group relative flex h-full flex-col gap-4 overflow-hidden rounded-xl border border-border bg-white p-6 shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:border-primary-600 hover:shadow-[var(--shadow-premium-lg)] active:border-primary-600 active:shadow-[var(--shadow-premium-lg)]">
                     <div
                       className="absolute inset-0 origin-top-left scale-0 bg-primary-600 transition-transform duration-500 ease-[var(--ease-premium)] group-hover:scale-100 group-active:scale-100"
                       aria-hidden
@@ -193,7 +194,7 @@ export default function AboutPage() {
 
       <StatsSection />
 
-      <section className="bg-surface py-20 sm:py-28">
+      <section className="bg-surface py-20">
         <Container>
           <SectionTitle
             eyebrow="Leadership"

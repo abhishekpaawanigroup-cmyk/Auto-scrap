@@ -3,7 +3,7 @@ import type { TeamMember } from "@/types";
 
 export function TeamCard({ member }: { member: TeamMember }) {
   return (
-    <div className="group flex flex-col items-center rounded-2xl border border-border bg-white p-7 text-center shadow-[var(--shadow-premium)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[var(--shadow-premium-lg)] active:-translate-y-1.5 active:shadow-[var(--shadow-premium-lg)]">
+    <div className="group flex h-full w-full flex-col items-center rounded-xl border border-border bg-white p-7 text-center shadow-[var(--shadow-premium)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[var(--shadow-premium-lg)] active:-translate-y-1.5 active:shadow-[var(--shadow-premium-lg)]">
       <div className="relative h-24 w-24 overflow-hidden rounded-full ring-4 ring-primary-50 transition-all duration-300 group-hover:ring-primary-100 group-active:ring-primary-100">
         <Image src={member.image} alt={member.name} fill className="object-cover" />
       </div>

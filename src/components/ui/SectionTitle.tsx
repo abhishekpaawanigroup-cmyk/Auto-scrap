@@ -34,7 +34,6 @@ export function SectionTitle({
                 : "border-primary-100 bg-primary-50 text-primary-700"
             )}
           >
-            <span className="h-1.5 w-1.5 rounded-full bg-accent-500" />
             {eyebrow}
           </span>
         </Reveal>

@@ -54,7 +54,7 @@ export function ServiceAvailability() {
 
         <Reveal direction="right">
           <span className="mx-auto flex w-fit items-center gap-2 rounded-full border border-primary-100 bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary-700 md:mx-0 md:inline-flex md:w-auto">
-            <span className="h-1.5 w-1.5 rounded-full bg-accent-500" />
+            
             Nationwide Coverage
           </span>
 

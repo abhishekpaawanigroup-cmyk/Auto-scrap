@@ -99,7 +99,7 @@ export function ProcessGallery() {
   }, [onWindowPointerMove, onWindowPointerUp]);
 
   return (
-    <section className="overflow-hidden bg-surface py-20 sm:py-28">
+    <section className="overflow-hidden bg-surface py-20">
       <Container>
         <SectionTitle
           eyebrow="Inside The Process"

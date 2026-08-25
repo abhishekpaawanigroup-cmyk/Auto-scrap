@@ -46,7 +46,6 @@ export function TraceabilitySection() {
         <div className="mx-auto flex max-w-2xl flex-col items-center gap-4 text-center">
           <Reveal>
             <span className="inline-flex items-center gap-2 rounded-full border border-primary-100 bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary-700">
-              <span className="h-1.5 w-1.5 rounded-full bg-primary-500" />
               Verified &amp; Traceable
             </span>
           </Reveal>
