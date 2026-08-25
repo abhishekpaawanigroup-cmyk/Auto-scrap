@@ -67,7 +67,7 @@ export function BlogListing({ posts }: { posts: BlogPost[] }) {
                 "rounded-full border px-4 py-2 text-xs font-semibold transition-colors",
                 category === cat
                   ? "border-primary-600 bg-primary-600 text-white"
-                  : "border-ink-200 bg-white text-ink-600 hover:border-primary-300"
+                  : "border-ink-200 bg-white text-ink-600 hover:border-primary-300 active:border-primary-300"
               )}
             >
               {cat}
@@ -96,7 +96,7 @@ export function BlogListing({ posts }: { posts: BlogPost[] }) {
                 onClick={() => setPage(p)}
                 className={cn(
                   "flex h-10 w-10 items-center justify-center rounded-full text-sm font-semibold transition-colors",
-                  page === p ? "bg-primary-600 text-white" : "bg-white text-ink-600 hover:bg-ink-100"
+                  page === p ? "bg-primary-600 text-white" : "bg-white text-ink-600 hover:bg-ink-100 active:bg-ink-100"
                 )}
               >
                 {p}
@@ -116,7 +116,7 @@ export function BlogListing({ posts }: { posts: BlogPost[] }) {
                   <Image src={post.image} alt={post.title} fill className="object-cover" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold leading-snug text-ink-900 group-hover:text-primary-700">
+                  <p className="text-sm font-semibold leading-snug text-ink-900 group-hover:text-primary-700 group-active:text-primary-700">
                     {post.title}
                   </p>
                   <p className="mt-1 text-xs text-ink-500">{formatDate(post.date)}</p>
@@ -135,7 +135,7 @@ export function BlogListing({ posts }: { posts: BlogPost[] }) {
                   <Image src={post.image} alt={post.title} fill className="object-cover" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold leading-snug text-ink-900 group-hover:text-primary-700">
+                  <p className="text-sm font-semibold leading-snug text-ink-900 group-hover:text-primary-700 group-active:text-primary-700">
                     {post.title}
                   </p>
                   <p className="mt-1 text-xs text-ink-500">{post.readTime}</p>
@@ -158,7 +158,7 @@ export function BlogListing({ posts }: { posts: BlogPost[] }) {
                       setCategory(cat);
                       setPage(1);
                     }}
-                    className="flex w-full items-center justify-between text-sm text-ink-600 hover:text-primary-700"
+                    className="flex w-full items-center justify-between text-sm text-ink-600 hover:text-primary-700 active:text-primary-700"
                   >
                     {cat}
                     <span className="text-xs text-ink-400">

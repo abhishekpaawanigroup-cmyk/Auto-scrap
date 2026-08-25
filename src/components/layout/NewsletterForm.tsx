@@ -31,10 +31,10 @@ export function NewsletterForm() {
       />
       <button
         type="submit"
-        className="group flex h-12 items-center justify-center gap-2 rounded-full bg-accent-500 text-sm font-semibold text-ink-950 transition-colors hover:bg-accent-400"
+        className="group flex h-12 items-center justify-center gap-2 rounded-full bg-accent-500 text-sm font-semibold text-ink-950 transition-colors hover:bg-accent-400 active:bg-accent-400"
       >
         Subscribe
-        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
+        <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-active:translate-x-0.5" />
       </button>
     </form>
   );

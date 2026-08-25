@@ -35,7 +35,7 @@ export function TestimonialsSection() {
                 type="button"
                 aria-label="Previous testimonials"
                 onClick={() => swiperRef.current?.slidePrev()}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-ink-900 text-white transition-colors duration-300 hover:bg-primary-600"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-ink-900 text-white transition-colors duration-300 hover:bg-primary-600 active:bg-primary-600"
               >
                 <ChevronLeft className="h-5 w-5" />
               </button>
@@ -43,7 +43,7 @@ export function TestimonialsSection() {
                 type="button"
                 aria-label="Next testimonials"
                 onClick={() => swiperRef.current?.slideNext()}
-                className="flex h-12 w-12 items-center justify-center rounded-full bg-ink-900 text-white transition-colors duration-300 hover:bg-primary-600"
+                className="flex h-12 w-12 items-center justify-center rounded-full bg-ink-900 text-white transition-colors duration-300 hover:bg-primary-600 active:bg-primary-600"
               >
                 <ChevronRight className="h-5 w-5" />
               </button>

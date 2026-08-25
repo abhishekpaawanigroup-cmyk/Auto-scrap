@@ -31,7 +31,7 @@ export default function NotFound() {
             href="/contact"
             size="lg"
             variant="ghost"
-            className="text-white hover:bg-white/10"
+            className="text-white hover:bg-white/10 active:bg-white/10"
             icon={<Search className="h-5 w-5" />}
             iconPosition="left"
           >

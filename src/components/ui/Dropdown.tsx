@@ -98,7 +98,7 @@ export function Dropdown({
                     }}
                     className={cn(
                       "flex w-full items-center justify-between gap-2 rounded-lg px-3 py-2.5 text-left text-sm transition-colors",
-                      isDark ? "text-ink-200 hover:bg-white/10" : "text-ink-700 hover:bg-ink-100",
+                      isDark ? "text-ink-200 hover:bg-white/10 active:bg-white/10" : "text-ink-700 hover:bg-ink-100 active:bg-ink-100",
                       isSelected && (isDark ? "bg-white/10 text-white" : "bg-primary-50 text-primary-700")
                     )}
                   >

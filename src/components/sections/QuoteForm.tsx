@@ -91,8 +91,10 @@ export function QuoteForm({ variant = "glass" }: { variant?: "glass" | "light" }
               reset();
               setStatus("idle");
             }}
-            className={`mt-3 text-sm font-semibold underline-offset-4 transition-colors hover:underline ${
-              isGlass ? "text-accent-400 hover:text-accent-300" : "text-primary-600 hover:text-primary-700"
+            className={`mt-3 text-sm font-semibold underline-offset-4 transition-colors hover:underline active:underline ${
+              isGlass
+                ? "text-accent-400 hover:text-accent-300 active:text-accent-300"
+                : "text-primary-600 hover:text-primary-700 active:text-primary-700"
             }`}
           >
             Submit Another Request
@@ -188,7 +190,7 @@ export function QuoteForm({ variant = "glass" }: { variant?: "glass" | "light" }
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="mt-2 flex h-13 items-center justify-center gap-2 rounded-full bg-primary-600 py-3.5 text-sm font-bold text-white shadow-[var(--shadow-glow)] transition-colors hover:bg-primary-700 disabled:opacity-70"
+            className="mt-2 flex h-13 items-center justify-center gap-2 rounded-full bg-primary-600 py-3.5 text-sm font-bold text-white shadow-[var(--shadow-glow)] transition-colors hover:bg-primary-700 active:bg-primary-700 disabled:opacity-70"
           >
             {status === "submitting" ? <Loader2 className="h-4 w-4 animate-spin" /> : "Get Quote Now"}
           </button>

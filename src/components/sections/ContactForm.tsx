@@ -44,7 +44,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="mt-2 flex h-13 items-center justify-center gap-2 rounded-full bg-primary-600 text-sm font-bold text-white shadow-[var(--shadow-glow)] transition-colors hover:bg-primary-700 disabled:opacity-70"
+        className="mt-2 flex h-13 items-center justify-center gap-2 rounded-full bg-primary-600 text-sm font-bold text-white shadow-[var(--shadow-glow)] transition-colors hover:bg-primary-700 active:bg-primary-700 disabled:opacity-70"
       >
         {status === "submitting" ? (
           <Loader2 className="h-4 w-4 animate-spin" />

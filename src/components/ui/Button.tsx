@@ -10,17 +10,17 @@ type Size = "sm" | "md" | "lg";
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-primary-600 text-white shadow-[var(--shadow-glow)] hover:bg-primary-700 focus-visible:outline-primary-600",
+    "bg-primary-600 text-white shadow-[var(--shadow-glow)] hover:bg-primary-700 active:bg-primary-700 focus-visible:outline-primary-600",
   secondary:
-    "bg-ink-900 text-white hover:bg-ink-800 focus-visible:outline-ink-900",
+    "bg-ink-900 text-white hover:bg-ink-800 active:bg-ink-800 focus-visible:outline-ink-900",
   outline:
-    "border border-ink-200 text-ink-900 hover:border-primary-600 hover:text-primary-700 bg-white",
-  ghost: "text-ink-900 hover:bg-ink-100",
-  white: "bg-white text-ink-900 hover:bg-ink-100 shadow-[var(--shadow-premium)]",
+    "border border-ink-200 text-ink-900 hover:border-primary-600 hover:text-primary-700 active:border-primary-600 active:text-primary-700 bg-white",
+  ghost: "text-ink-900 hover:bg-ink-100 active:bg-ink-100",
+  white: "bg-white text-ink-900 hover:bg-ink-100 active:bg-ink-100 shadow-[var(--shadow-premium)]",
   accent:
-    "bg-accent-500 text-ink-950 shadow-[var(--shadow-glow)] hover:bg-accent-600 focus-visible:outline-accent-500",
+    "bg-accent-500 text-ink-950 shadow-[var(--shadow-glow)] hover:bg-accent-600 active:bg-accent-600 focus-visible:outline-accent-500",
   "outline-white":
-    "bg-transparent border border-white/60 text-white hover:bg-white hover:text-ink-900 focus-visible:outline-white",
+    "bg-transparent border border-white/60 text-white hover:bg-white hover:text-ink-900 active:bg-white active:text-ink-900 focus-visible:outline-white",
 };
 
 const sizeClasses: Record<Size, string> = {
@@ -77,7 +77,7 @@ export const Button = forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonPr
         {icon && iconPosition === "left" && <span className="shrink-0">{icon}</span>}
         <span>{children}</span>
         {icon && iconPosition === "right" && (
-          <span className="shrink-0 transition-transform duration-300 group-hover:translate-x-0.5">
+          <span className="shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-active:translate-x-0.5">
             {icon}
           </span>
         )}

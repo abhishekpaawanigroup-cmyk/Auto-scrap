@@ -73,7 +73,7 @@ export default async function BlogPostPage({
           <div className="absolute inset-0 bg-grid opacity-[0.05]" aria-hidden />
           <Container className="relative z-10 max-w-3xl">
             <Reveal>
-              <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-ink-400 hover:text-white">
+              <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-ink-400 hover:text-white active:text-white">
                 <ArrowLeft className="h-4 w-4" />
                 Back to Blog
               </Link>

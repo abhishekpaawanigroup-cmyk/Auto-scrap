@@ -41,7 +41,7 @@ export function TraceabilitySteps({
 
   return (
     <div className="relative">
-      <div className="no-scrollbar -mx-5 flex gap-2 overflow-x-auto px-5 pb-1 sm:mx-0 sm:px-0 md:hidden">
+      <div className="flex flex-col gap-2 md:hidden">
         {checkpoints.map((checkpoint, index) => {
           const Icon = getIcon(checkpoint.navIcon);
           const isActive = index === activeIndex;
@@ -53,7 +53,7 @@ export function TraceabilitySteps({
               aria-current={isActive}
               aria-label={`Step ${checkpoint.number}: ${checkpoint.navTitle}`}
               className={cn(
-                "flex shrink-0 items-center gap-2 rounded-full border px-4 py-2.5 text-xs font-semibold transition-all duration-300",
+                "flex h-12 w-full items-center gap-2 rounded-full border px-4 text-xs font-semibold transition-all duration-300",
                 isActive
                   ? "border-primary-500 bg-primary-50 text-primary-700 shadow-[0_0_0_4px_rgba(26,126,0,0.12)]"
                   : "border-ink-200 bg-white text-ink-500"

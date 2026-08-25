@@ -62,7 +62,7 @@ export default function ContactPage() {
               return (
                 <Reveal key={card.title} direction="up">
                   {card.href ? (
-                    <a href={card.href} className="block h-full rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-premium)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-premium-lg)]">
+                    <a href={card.href} className="block h-full rounded-2xl border border-border bg-white p-6 shadow-[var(--shadow-premium)] transition-all hover:-translate-y-1 hover:shadow-[var(--shadow-premium-lg)] active:-translate-y-1 active:shadow-[var(--shadow-premium-lg)]">
                       {content}
                     </a>
                   ) : (
@@ -110,7 +110,7 @@ export default function ContactPage() {
                       aria-label={label}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex h-11 w-11 items-center justify-center rounded-full border border-ink-200 text-ink-600 transition-colors hover:border-primary-600 hover:bg-primary-600 hover:text-white"
+                      className="flex h-11 w-11 items-center justify-center rounded-full border border-ink-200 text-ink-600 transition-colors hover:border-primary-600 hover:bg-primary-600 hover:text-white active:border-primary-600 active:bg-primary-600 active:text-white"
                     >
                       <Icon className="h-4 w-4" />
                     </a>

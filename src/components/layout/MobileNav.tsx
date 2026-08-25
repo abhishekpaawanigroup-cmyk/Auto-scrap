@@ -111,7 +111,7 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
                     onClick={onClose}
                     className={cn(
                       "rounded-xl px-3 py-3 text-[15px] font-semibold",
-                      active ? "bg-primary-50 text-primary-700" : "text-ink-900 hover:bg-ink-100"
+                      active ? "bg-primary-50 text-primary-700" : "text-ink-900 hover:bg-ink-100 active:bg-ink-100"
                     )}
                   >
                     {item.label}

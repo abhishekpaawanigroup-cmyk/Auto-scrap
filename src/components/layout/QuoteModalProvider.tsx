@@ -54,7 +54,7 @@ export function QuoteModalProvider({ children }: { children: ReactNode }) {
                 type="button"
                 onClick={closeQuoteModal}
                 aria-label="Close"
-                className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white text-ink-700 shadow-[var(--shadow-premium-lg)] transition-colors hover:text-primary-600"
+                className="absolute right-4 top-4 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-white text-ink-700 shadow-[var(--shadow-premium-lg)] transition-colors hover:text-primary-600 active:text-primary-600"
               >
                 <X className="h-4 w-4" />
               </button>

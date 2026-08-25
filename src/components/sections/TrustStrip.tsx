@@ -23,8 +23,8 @@ export function TrustStrip() {
             const Icon = getIcon(benefit.icon);
             return (
               <RevealItem key={benefit.label} direction="up">
-                <div className="group flex h-full flex-col items-center gap-2.5 rounded-2xl px-3 py-4 text-center transition-colors duration-300 hover:bg-primary-50 sm:gap-3 sm:py-5">
-                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-600 transition-all duration-300 ease-[var(--ease-premium)] group-hover:-translate-y-0.5 group-hover:bg-primary-600 group-hover:text-white sm:h-12 sm:w-12">
+                <div className="group flex h-full flex-col items-center gap-2.5 rounded-2xl px-3 py-4 text-center transition-colors duration-300 hover:bg-primary-50 active:bg-primary-50 sm:gap-3 sm:py-5">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-primary-50 text-primary-600 transition-all duration-300 ease-[var(--ease-premium)] group-hover:-translate-y-0.5 group-hover:bg-primary-600 group-hover:text-white group-active:-translate-y-0.5 group-active:bg-primary-600 group-active:text-white sm:h-12 sm:w-12">
                     <Icon className="h-5 w-5 sm:h-6 sm:w-6" strokeWidth={1.75} />
                   </span>
                   <span className="text-xs font-bold leading-snug text-ink-800 sm:text-[13px]">

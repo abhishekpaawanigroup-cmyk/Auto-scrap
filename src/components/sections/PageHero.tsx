@@ -21,7 +21,7 @@ export function PageHero({
       <div className="absolute right-0 bottom-0 h-72 w-72 rounded-full bg-accent-500/15 blur-[110px]" aria-hidden />
       <Container className="relative z-10">
         <Reveal className="flex items-center gap-2 text-sm text-ink-400">
-          <Link href="/" className="hover:text-white">
+          <Link href="/" className="hover:text-white active:text-white">
             Home
           </Link>
           <ChevronRight className="h-3.5 w-3.5" />

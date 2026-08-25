@@ -26,20 +26,20 @@ export function WhyChooseUs() {
             const Icon = getIcon(item.icon);
             return (
               <RevealItem key={item.id} direction="up">
-                <div className="group relative flex h-full min-h-[220px] flex-col gap-4 overflow-hidden rounded-xl border border-white/10 bg-ink-900 p-6 transition-all duration-300 ease-[var(--ease-premium)] hover:border-accent-600 hover:bg-accent-500 hover:shadow-[var(--shadow-premium-lg)]">
+                <div className="group relative flex h-full min-h-[220px] flex-col gap-4 overflow-hidden rounded-xl border border-white/10 bg-ink-900 p-6 transition-all duration-300 ease-[var(--ease-premium)] hover:border-accent-600 hover:bg-accent-500 hover:shadow-[var(--shadow-premium-lg)] active:border-accent-600 active:bg-accent-500 active:shadow-[var(--shadow-premium-lg)]">
                   <div
-                    className="bg-pattern-diagonal pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                    className="bg-pattern-diagonal pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-active:opacity-100"
                     aria-hidden
                   />
                   <div className="relative z-10 flex h-full flex-col gap-4">
                     <Icon
-                      className="h-10 w-10 text-accent-400 transition-colors duration-300 group-hover:text-ink-950"
+                      className="h-10 w-10 text-accent-400 transition-colors duration-300 group-hover:text-ink-950 group-active:text-ink-950"
                       strokeWidth={1.5}
                     />
-                    <h3 className="text-base font-bold text-white transition-colors duration-300 group-hover:text-ink-950">
+                    <h3 className="text-base font-bold text-white transition-colors duration-300 group-hover:text-ink-950 group-active:text-ink-950">
                       {item.title}
                     </h3>
-                    <p className="text-sm leading-relaxed text-ink-400 transition-colors duration-300 group-hover:text-ink-900">
+                    <p className="text-sm leading-relaxed text-ink-400 transition-colors duration-300 group-hover:text-ink-900 group-active:text-ink-900">
                       {item.description}
                     </p>
                   </div>

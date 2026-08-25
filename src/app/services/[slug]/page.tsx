@@ -66,7 +66,7 @@ export default async function ServiceDetailPage({
         <div className="absolute inset-0 bg-grid opacity-[0.05]" aria-hidden />
         <Container className="relative z-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <Reveal direction="left">
-            <Link href="/services" className="text-sm text-ink-400 hover:text-white">
+            <Link href="/services" className="text-sm text-ink-400 hover:text-white active:text-white">
               &larr; Back to Services
             </Link>
             <div className="mt-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-primary-600 text-white shadow-[var(--shadow-glow)]">
@@ -127,7 +127,7 @@ export default async function ServiceDetailPage({
                 <Link
                   key={item.id}
                   href={`/services/${item.slug}`}
-                  className="group flex flex-col rounded-2xl border border-border bg-surface p-6 transition-all hover:-translate-y-1 hover:border-primary-200 hover:shadow-[var(--shadow-premium)]"
+                  className="group flex flex-col rounded-2xl border border-border bg-surface p-6 transition-all hover:-translate-y-1 hover:border-primary-200 hover:shadow-[var(--shadow-premium)] active:-translate-y-1 active:border-primary-200 active:shadow-[var(--shadow-premium)]"
                 >
                   <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-primary-50 text-primary-700">
                     <RelatedIcon className="h-5 w-5" strokeWidth={1.75} />

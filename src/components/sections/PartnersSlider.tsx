@@ -21,7 +21,7 @@ export function PartnersSlider() {
               alt={partner.name}
               width={140}
               height={56}
-              className="h-14 w-auto opacity-90 transition-opacity hover:opacity-100"
+              className="h-14 w-auto opacity-90 transition-opacity hover:opacity-100 active:opacity-100"
             />
           ))}
         </div>
