@@ -26,13 +26,13 @@ export function Footer() {
       <Container className="relative z-10 pt-16 pb-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_0.8fr_0.9fr_0.9fr_1.1fr]">
           <div className="flex flex-col gap-5">
-            <div className="w-fit rounded-xl p-2">
+            <div className="w-fit rounded-xl">
               <Image
                 src="/images/logo1.png"
                 alt={SITE_CONFIG.name}
-                width={120}
+                width={180}
                 height={80}
-                className="h-14 w-auto sm:h-16"
+                // className="h-10 w-45"
               />
             </div>
             <p className="max-w-xs text-sm leading-relaxed text-ink-400">
@@ -47,7 +47,7 @@ export function Footer() {
                   aria-label={label}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-ink-300 transition-colors hover:border-accent-500 hover:bg-accent-500 hover:text-ink-950"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-ink-300 transition-colors hover:border-primary-500 hover:bg-primary-500 hover:text-ink-950"
                 >
                   <Icon className="h-4 w-4" />
                 </a>
@@ -65,9 +65,9 @@ export function Footer() {
                 <li key={location.id}>
                   <a
                     href={`tel:${SITE_CONFIG.contact.phoneRaw}`}
-                    className="flex items-center gap-2.5 text-sm text-ink-400 transition-colors hover:text-accent-400"
+                    className="flex items-center gap-2.5 text-sm text-ink-400 transition-colors hover:text-primary-500"
                   >
-                    <MapPin className="h-3.5 w-3.5 shrink-0 text-accent-500" />
+                    <MapPin className="h-3.5 w-3.5 shrink-0 text-primary-500" />
                     {location.city}
                   </a>
                 </li>
@@ -77,20 +77,20 @@ export function Footer() {
 
           <div className="flex flex-col gap-4">
             <h4 className="relative w-fit pb-2 text-sm font-bold uppercase tracking-wide text-white after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-8 after:rounded-full after:bg-accent-500">Contact Us</h4>
-            <a href={`https://maps.google.com`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-sm text-ink-400 transition-colors hover:text-accent-400">
-              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-accent-500" />
+            <a href={`https://maps.google.com`} target="_blank" rel="noopener noreferrer" className="flex items-start gap-3 text-sm text-ink-400 transition-colors hover:text-primary-500">
+              <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-primary-500" />
               {SITE_CONFIG.contact.address}
             </a>
-            <a href={`tel:${SITE_CONFIG.contact.phoneRaw}`} className="flex items-center gap-3 text-sm text-ink-400 transition-colors hover:text-accent-400">
-              <Phone className="h-4 w-4 shrink-0 text-accent-500" />
+            <a href={`tel:${SITE_CONFIG.contact.phoneRaw}`} className="flex items-center gap-3 text-sm text-ink-400 transition-colors hover:text-primary-500">
+              <Phone className="h-4 w-4 shrink-0 text-primary-500" />
               {SITE_CONFIG.contact.phone}
             </a>
-            <a href={`mailto:${SITE_CONFIG.contact.email}`} className="flex items-center gap-3 text-sm text-ink-400 transition-colors hover:text-accent-400">
-              <Mail className="h-4 w-4 shrink-0 text-accent-500" />
+            <a href={`mailto:${SITE_CONFIG.contact.email}`} className="flex items-center gap-3 text-sm text-ink-400 transition-colors hover:text-primary-500">
+              <Mail className="h-4 w-4 shrink-0 text-primary-500" />
               {SITE_CONFIG.contact.email}
             </a>
             <p className="flex items-center gap-3 text-sm text-ink-400">
-              <Clock className="h-4 w-4 shrink-0 text-accent-500" />
+              <Clock className="h-4 w-4 shrink-0 text-primary-500" />
               {SITE_CONFIG.contact.hours}
             </p>
           </div>
@@ -102,7 +102,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-6 text-xs">
             {navigation.legalLinks.map((link) => (
-              <Link key={link.href} href={link.href} className="text-ink-500 transition-colors hover:text-accent-400">
+              <Link key={link.href} href={link.href} className="text-ink-500 transition-colors hover:text-primary-500">
                 {link.label}
               </Link>
             ))}
@@ -128,7 +128,7 @@ function FooterColumn({
       <ul className="flex flex-col gap-3">
         {links.map((link) => (
           <li key={link.href}>
-            <Link href={link.href} className="text-sm text-ink-400 transition-colors hover:text-accent-400">
+            <Link href={link.href} className="text-sm text-ink-400 transition-colors hover:text-primary-500">
               {link.label}
             </Link>
           </li>

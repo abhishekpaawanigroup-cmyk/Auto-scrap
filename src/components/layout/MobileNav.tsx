@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { Phone, X } from "lucide-react";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
 import { Button } from "@/components/ui/Button";
 import { useQuoteModal } from "@/components/layout/QuoteModalProvider";
@@ -12,6 +13,12 @@ import { SITE_CONFIG } from "@/constants/site";
 import navigation from "@/data/navigation.json";
 import type { NavLink } from "@/types";
 import { cn } from "@/lib/utils";
+
+const socialLinks = [
+  { href: SITE_CONFIG.social.facebook, icon: FaFacebookF, label: "Facebook" },
+  { href: SITE_CONFIG.social.instagram, icon: FaInstagram, label: "Instagram" },
+  { href: SITE_CONFIG.social.youtube, icon: FaYoutube, label: "YouTube" },
+];
 
 export function AnimatedHamburger({
   open,
@@ -77,13 +84,13 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
             className="fixed inset-y-0 right-0 z-50 flex w-[86%] max-w-sm flex-col bg-white shadow-2xl lg:hidden"
           >
-            <div className="flex items-center justify-between border-b border-border px-6 py-5">
+            <div className="flex items-center justify-between border-b border-border px-6">
               <Image
                 src="/images/logo.png"
                 alt={SITE_CONFIG.name}
-                width={84}
-                height={56}
-                className="h-11 w-auto"
+                width={160}
+                height={60}
+                // className="h-11 w-auto"
               />
               <button
                 type="button"
@@ -112,7 +119,21 @@ export function MobileNav({ open, onClose }: { open: boolean; onClose: () => voi
                 );
               })}
             </nav>
-            <div className="flex flex-col gap-3 border-t border-border p-6">
+            <div className="flex items-center gap-3 px-6 pb-2">
+              {socialLinks.map(({ href, icon: Icon, label }) => (
+                <a
+                  key={label}
+                  href={href}
+                  aria-label={label}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-10 w-10 items-center justify-center rounded-full border border-ink-200 text-ink-700 transition-colors hover:border-primary-500 hover:bg-primary-500 hover:text-white"
+                >
+                  <Icon className="h-4 w-4" />
+                </a>
+              ))}
+            </div>
+            <div className="flex flex-col gap-3 p-6">
               <Button
                 href={`tel:${SITE_CONFIG.contact.phoneRaw}`}
                 variant="outline"

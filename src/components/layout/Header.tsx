@@ -93,10 +93,10 @@ export function Header() {
             <Image
               src="/images/logo.png"
               alt={`${SITE_CONFIG.name} logo`}
-              width={120}
+              width={180}
               height={80}
               priority
-              className="h-12 w-auto transition-all duration-300 sm:h-14"
+              // className="h-12 w-auto transition-all duration-300 sm:h-14"
             />
           </Link>
 

@@ -5,18 +5,6 @@ export interface NavLink {
   href: string;
 }
 
-export interface VehicleType {
-  id: string;
-  slug: string;
-  name: string;
-  category: string;
-  image: string;
-  icon: string;
-  description: string;
-  averagePrice: string;
-  features: string[];
-}
-
 export interface Service {
   id: string;
   slug: string;
