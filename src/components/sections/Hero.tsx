@@ -36,22 +36,21 @@ export function Hero() {
         aria-hidden
       />
 
-      <Container className="relative z-10 flex min-h-[560px] flex-col items-center justify-center py-24 text-center sm:min-h-[760px] sm:py-28">
+      <Container className="relative z-10 flex min-h-[560px] flex-col items-center justify-center py-16 text-center sm:min-h-[760px] sm:py-28">
         <motion.span
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-          className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm sm:text-sm"
+          className="inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-2 sm:px-4 py-1.5 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.14em] text-white backdrop-blur-sm sm:text-sm"
         >
           
           Government-Authorized Vehicle Scrapping
         </motion.span>
-
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.08, ease: [0.16, 1, 0.3, 1] }}
-          className="mt-6 max-w-4xl text-5xl font-bold leading-[1.08] text-white sm:text-6xl lg:text-7xl"
+          className="mt-6 max-w-4xl text-3xl sm:text-5xl font-bold leading-[1.08] text-white sm:text-6xl lg:text-7xl"
         >
           Scrap Your Old Vehicle
           <br />

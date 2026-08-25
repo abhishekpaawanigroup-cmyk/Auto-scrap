@@ -13,7 +13,7 @@ const benefits = [
 
 export function TrustStrip() {
   return (
-    <section className="relative z-20 -mt-14 sm:-mt-16 ">
+    <section className="relative z-20 mt-10 sm:-mt-16 ">
       <Container>
         <RevealGroup
           staggerDelay={0.06}

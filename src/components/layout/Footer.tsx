@@ -23,7 +23,7 @@ export function Footer() {
   return (
     <footer className="relative overflow-hidden bg-ink-950 text-ink-300">
       <div className="absolute inset-0 bg-grid opacity-[0.03]" aria-hidden />
-      <Container className="relative z-10 pt-16 pb-8">
+      <Container className="relative z-10 pt-10 pb-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_0.8fr_0.9fr_0.9fr_1.1fr]">
           <div className="flex flex-col gap-5">
             <div className="w-fit rounded-xl">

@@ -16,21 +16,21 @@ export function TestimonialsSection() {
   const swiperRef = useRef<SwiperType | null>(null);
 
   return (
-    <section className="bg-surface py-20 sm:py-28">
+    <section className="bg-surface py-20 sm:py-24">
       <Container>
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.85fr_2fr] lg:gap-12">
-          <Reveal direction="left" className="flex flex-col lg:sticky lg:top-28 lg:self-start">
-            <div className="flex items-center gap-2.5">
+          <Reveal direction="left" className="flex flex-col text-center md:text-left lg:sticky lg:top-28 lg:self-start">
+            <div className="flex items-center gap-2.5 m-auto md:m-0">
               <span className="h-px w-7 bg-primary-600" />
               <span className="text-sm font-semibold uppercase tracking-wide text-ink-500">Testimonials</span>
             </div>
             <h2 className="mt-4 text-3xl font-bold leading-tight text-ink-900 sm:text-4xl lg:text-[2.6rem]">
               What Our Customers Say About Us
             </h2>
-            <p className="mt-5 max-w-md text-base leading-relaxed text-ink-500">
+            <p className="mt-5 text-base leading-relaxed text-ink-500">
               Real experiences from vehicle owners who chose a transparent, certified scrapping process.
             </p>
-            <div className="mt-8 flex gap-3">
+            <div className="mt-8 flex gap-3 mx-auto md:mx-0">
               <button
                 type="button"
                 aria-label="Previous testimonials"

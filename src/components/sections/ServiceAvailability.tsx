@@ -53,17 +53,17 @@ export function ServiceAvailability() {
         </Reveal>
 
         <Reveal direction="right">
-          <span className="inline-flex items-center gap-2 rounded-full border border-primary-100 bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary-700">
+          <span className="mx-auto flex w-fit items-center gap-2 rounded-full border border-primary-100 bg-primary-50 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-primary-700 md:mx-0 md:inline-flex md:w-auto">
             <span className="h-1.5 w-1.5 rounded-full bg-accent-500" />
             Nationwide Coverage
           </span>
 
-          <h2 className="text-gradient-primary mt-4 text-3xl font-bold leading-tight sm:text-4xl lg:text-[2.75rem]">
+          <h2 className="text-gradient-primary mt-4 text-3xl font-bold leading-tight text-center md:text-left sm:text-4xl lg:text-[2.75rem]">
             Our Presence Across India
           </h2>
 
-          <p className="mt-4 max-w-md text-base leading-relaxed text-ink-500 sm:text-lg">
-            Certified pickup and recycling partners in {COMPANY_STATS.citiesCovered}+ cities — check if we&apos;re already live in yours.
+          <p className="mt-4 text-base leading-relaxed text-ink-500 text-center md:text-left sm:text-lg">
+            Certified pickup and recycling partners in {COMPANY_STATS.citiesCovered}+ cities - check if we&apos;re already live in yours.
           </p>
 
           <form
@@ -71,7 +71,7 @@ export function ServiceAvailability() {
             className="mt-8 max-w-md rounded-xl border border-border bg-white p-6 shadow-[var(--shadow-premium)] sm:p-7"
           >
             <h3 className="text-lg font-bold text-ink-900">Check Service Availability</h3>
-            <p className="mt-1 text-sm text-ink-500">We&apos;re expanding fast — see if we serve your area.</p>
+            <p className="mt-1 text-sm text-ink-500">We&apos;re expanding fast - see if we serve your area.</p>
 
             <div className="relative mt-5">
               <MapPin className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-ink-400" />
@@ -112,7 +112,7 @@ export function ServiceAvailability() {
                 className="mt-4 flex items-start gap-2 rounded-xl bg-primary-50 p-3 text-sm text-primary-700"
               >
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" />
-                <span>Good news — pincode {pincode} is within our active service network. Our team will reach out within 24 hours.</span>
+                <span>Good news - pincode {pincode} is within our active service network. Our team will reach out within 24 hours.</span>
               </motion.div>
             )}
           </form>
