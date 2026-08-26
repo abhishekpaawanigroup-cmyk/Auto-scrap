@@ -20,12 +20,12 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const stepImages: Record<number, string> = {
-  1: "/images/gallery/documentation.svg",
-  2: "/images/gallery/inspection.svg",
-  3: "/images/gallery/pickup.svg",
-  4: "/images/gallery/facility.svg",
-  5: "/images/gallery/documentation.svg",
-  6: "/images/gallery/dismantling.svg",
+  1: "/images/gallery/quote.png",
+  2: "/images/gallery/inspection.png",
+  3: "/images/gallery/pickup.png",
+  4: "/images/gallery/payment.png",
+  5: "/images/gallery/rc.png",
+  6: "/images/gallery/eco.png",
 };
 
 export default function HowItWorksPage() {
@@ -38,6 +38,7 @@ export default function HowItWorksPage() {
         breadcrumb="How It Works"
         title="A Transparent, 6-Step Recovery Process"
         description="Every stage is tracked and documented - so you always know exactly where your vehicle is in the process."
+        backgroundImage="/images/gallery/hero.png"
       />
 
       <section className="bg-surface py-20 sm:py-28">

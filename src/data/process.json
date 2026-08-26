@@ -3,42 +3,42 @@
     "id": "p1",
     "step": 1,
     "title": "Request Quote",
-    "description": "Share your vehicle details online or by phone and receive a transparent, no-obligation valuation within minutes.",
+    "description": "Share your vehicle details online or over the phone and receive a quick, transparent, and completely no-obligation valuation within minutes. Our team ensures a fair assessment based on your vehicle’s condition, make, model, and current market value, giving you complete clarity and confidence before moving forward with the vehicle scrapping process.",
     "icon": "ClipboardList"
   },
   {
     "id": "p2",
     "step": 2,
     "title": "Vehicle Inspection",
-    "description": "Our certified inspector assesses your vehicle's condition to confirm final pricing at your location.",
+    "description": "Our certified and experienced inspector visits your location at a convenient time to thoroughly assess your vehicle's overall condition, verify the details provided, and evaluate all relevant factors before confirming the final price. We ensure a fair, accurate, and completely transparent valuation with no hidden charges or unexpected deductions.",
     "icon": "Search"
   },
   {
     "id": "p3",
     "step": 3,
     "title": "Free Pickup",
-    "description": "We schedule a doorstep pickup at a time that works for you - anywhere across our service network.",
+    "description": "Once everything is confirmed, we schedule a completely free doorstep pickup at a time and location that is convenient for you. Our professional team handles the vehicle collection safely and efficiently, ensuring a smooth and hassle-free experience anywhere across our service network.",
     "icon": "Truck"
   },
   {
     "id": "p4",
     "step": 4,
     "title": "Instant Payment",
-    "description": "Receive full payment digitally the moment your vehicle is collected. No delays, no follow-ups.",
+    "description": "Receive your full and agreed-upon payment instantly through a secure digital payment method at the time your vehicle is collected. With no unnecessary delays, hidden deductions, or repeated follow-ups, we ensure a fast, transparent, and completely hassle-free payment experience.",
     "icon": "Wallet"
   },
   {
     "id": "p5",
     "step": 5,
     "title": "RC Cancellation",
-    "description": "We manage the complete RTO deregistration process so you're fully protected from future liability.",
+    "description": "We take care of the complete RTO deregistration and RC cancellation process to ensure your vehicle is legally removed from your name. Our team handles the required documentation and formalities, helping protect you from any future legal, financial, or ownership-related liabilities after your vehicle has been scrapped.",
     "icon": "FileCheck2"
   },
   {
     "id": "p6",
     "step": 6,
     "title": "Eco Recycling",
-    "description": "Your vehicle is dismantled and recycled at our certified facility, recovering up to 95% of materials.",
+    "description": "Your vehicle is responsibly dismantled and processed at our certified recycling facility, where reusable materials are carefully recovered and recycled in an environmentally responsible manner. With up to 95% of the vehicle’s materials recovered, we help reduce waste, conserve valuable resources, and ensure that every stage of the recycling process follows sustainable and responsible practices.",
     "icon": "Recycle"
   }
 ]
