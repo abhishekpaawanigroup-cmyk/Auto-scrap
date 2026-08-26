@@ -38,7 +38,7 @@ export default function AboutPage() {
       <section className="bg-surface py-20 sm:py-28">
         <Container className="grid grid-cols-1 items-center gap-14 lg:grid-cols-2">
           <Reveal direction="left">
-            <div className="relative overflow-hidden rounded-3xl border border-border shadow-[var(--shadow-premium-lg)]">
+            <div className="relative overflow-hidden rounded-2xl border border-border shadow-[var(--shadow-premium-lg)]">
               <Image
                 src="/images/about/story.png"
                 alt="Our story"
