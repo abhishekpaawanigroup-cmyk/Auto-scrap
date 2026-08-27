@@ -23,7 +23,7 @@ export const SITE_CONFIG = {
     address: "123 Industrial Corridor, Sector 12, New Delhi, 110016",
     hours: "Everyday, 9:00 AM - 7:00 PM",
     mapEmbedUrl:
-      "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.5!2d77.2!3d28.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1",
+      "https://www.google.com/maps/embed?pb=!1m16!1m11!1m3!1d3!2d77.8135521!3d29.8808663!2m2!1f0!2f90!3m2!1i1024!2i768!4f75!3m3!1m2!1s0x390eb78b042d14df%3A0x25bae371655fa49d!2sGarhwal%20Scrap%20Private%20Limited!3m2!1sen!2sin!4v1787738963540!5m2!1sen!2sin",
   },
   social: {
     facebook: "https://facebook.com",

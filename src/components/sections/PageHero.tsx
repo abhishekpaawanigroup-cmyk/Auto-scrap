@@ -11,7 +11,7 @@ export function PageHero({
   breadcrumb,
   backgroundImage,
 }: {
-  eyebrow: string;
+  eyebrow?: string;
   title: string;
   description?: string;
   breadcrumb: string;
@@ -37,13 +37,15 @@ export function PageHero({
           <ChevronRight className="h-3.5 w-3.5" />
           <span className="text-accent-400">{breadcrumb}</span>
         </Reveal>
-        <Reveal delay={0.08}>
-          <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent-400">
-            {eyebrow}
-          </span>
-        </Reveal>
+        {eyebrow && (
+          <Reveal delay={0.08}>
+            <span className="mt-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.14em] text-accent-400">
+              {eyebrow}
+            </span>
+          </Reveal>
+        )}
         <Reveal delay={0.14}>
-          <h1 className="mt-5 max-w-2xl text-4xl font-bold leading-tight text-white sm:text-5xl">
+          <h1 className={`max-w-2xl text-4xl font-bold leading-tight text-white sm:text-5xl ${eyebrow ? "mt-5" : "mt-6"}`}>
             {title}
           </h1>
         </Reveal>
