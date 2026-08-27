@@ -8,7 +8,7 @@ export function BlogCard({ post, featured = false }: { post: BlogPost; featured?
   return (
     <Link
       href={`/blog/${post.slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-white shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:shadow-[var(--shadow-premium-lg)] active:-translate-y-1.5 active:shadow-[var(--shadow-premium-lg)]"
+      className="group flex flex-col overflow-hidden rounded-xl border border-border bg-white shadow-[var(--shadow-premium)] transition-all duration-300 ease-[var(--ease-premium)] hover:-translate-y-1.5 hover:shadow-[var(--shadow-premium-lg)] active:-translate-y-1.5 active:shadow-[var(--shadow-premium-lg)]"
     >
       <div className={`relative w-full overflow-hidden ${featured ? "aspect-[16/10]" : "aspect-[16/11]"}`}>
         <Image

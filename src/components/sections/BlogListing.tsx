@@ -10,7 +10,7 @@ import { cn } from "@/lib/utils";
 import { formatDate } from "@/utils/format";
 import type { BlogPost } from "@/types";
 
-const PAGE_SIZE = 6;
+const PAGE_SIZE = 4;
 
 export function BlogListing({ posts }: { posts: BlogPost[] }) {
   const [query, setQuery] = useState("");
@@ -107,7 +107,7 @@ export function BlogListing({ posts }: { posts: BlogPost[] }) {
       </div>
 
       <aside className="flex flex-col gap-8">
-        <div className="rounded-2xl border border-border bg-white p-6">
+        <div className="rounded-xl border border-border bg-white p-6">
           <h3 className="text-sm font-bold uppercase tracking-wide text-ink-900">Recent Posts</h3>
           <div className="mt-5 flex flex-col gap-4">
             {recentPosts.map((post) => (
@@ -126,7 +126,7 @@ export function BlogListing({ posts }: { posts: BlogPost[] }) {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-border bg-white p-6">
+        <div className="rounded-xl border border-border bg-white p-6">
           <h3 className="text-sm font-bold uppercase tracking-wide text-ink-900">Popular Posts</h3>
           <div className="mt-5 flex flex-col gap-4">
             {popularPosts.map((post) => (
@@ -145,7 +145,7 @@ export function BlogListing({ posts }: { posts: BlogPost[] }) {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-border bg-white p-6">
+        <div className="rounded-xl border border-border bg-white p-6">
           <h3 className="text-sm font-bold uppercase tracking-wide text-ink-900">Categories</h3>
           <ul className="mt-5 flex flex-col gap-2.5">
             {categories
