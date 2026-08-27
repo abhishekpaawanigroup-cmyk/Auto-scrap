@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowRight, Check } from "lucide-react";
@@ -64,8 +63,8 @@ export default async function ServiceDetailPage({
 
       <section className="relative overflow-hidden bg-ink-950 py-20 sm:py-24">
         <div className="absolute inset-0 bg-grid opacity-[0.05]" aria-hidden />
-        <Container className="relative z-10 grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
-          <Reveal direction="left">
+        <Container className="relative z-10">
+          <Reveal direction="left" className="max-w-2xl">
             <Link href="/services" className="text-sm text-ink-400 hover:text-white active:text-white">
               &larr; Back to Services
             </Link>
@@ -81,16 +80,6 @@ export default async function ServiceDetailPage({
                 Request This Service
               </Button>
             </div>
-          </Reveal>
-          <Reveal direction="right" className="overflow-hidden rounded-3xl border border-white/10">
-            <Image
-              src={service.image}
-              alt={service.title}
-              width={720}
-              height={540}
-              priority
-              className="h-full w-full object-cover"
-            />
           </Reveal>
         </Container>
       </section>
