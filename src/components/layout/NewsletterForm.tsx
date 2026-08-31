@@ -27,7 +27,7 @@ export function NewsletterForm() {
         type="email"
         required
         placeholder="Enter your email"
-        className="h-12 rounded-full border border-white/10 bg-white/5 px-5 text-sm text-white placeholder:text-ink-500 focus:border-accent-500 focus:outline-none"
+        className="h-12 rounded-full border border-black/5 bg-white/5 px-5 text-sm text-white placeholder:text-ink-500 focus:border-accent-500 focus:outline-none"
       />
       <button
         type="submit"

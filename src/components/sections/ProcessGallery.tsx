@@ -4,202 +4,81 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import type { PointerEvent as ReactPointerEvent } from "react";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
-import { Expand, X } from "lucide-react";
+import { ChevronLeft, ChevronRight, Expand, X } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionTitle } from "@/components/ui/SectionTitle";
+import { RevealGroup, RevealItem } from "@/components/ui/Reveal";
 import { useLockBodyScroll } from "@/hooks/useLockBodyScroll";
+import { cn } from "@/lib/utils";
 import gallery from "@/data/gallery.json";
 import type { GalleryItem } from "@/types";
 
 const EASE = [0.16, 1, 0.3, 1] as const;
-const DRAG_THRESHOLD = 6;
-const FOCUS_SWIPE_THRESHOLD = 60;
-const AUTOPLAY_INTERVAL = 4000;
+const SWIPE_THRESHOLD = 60;
 
-function useCanHover() {
-  const [canHover, setCanHover] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia("(hover: hover) and (pointer: fine)");
-    setCanHover(mq.matches);
-    const listener = () => setCanHover(mq.matches);
-    mq.addEventListener("change", listener);
-    return () => mq.removeEventListener("change", listener);
-  }, []);
-  return canHover;
-}
+// The one tile rendered as a wide hero. With 8 items and one 2-col-wide tile,
+// the grid totals 9 cells - an exact multiple of the 3-column desktop grid,
+// so every row fills completely with no leftover gaps.
+const FEATURED_ID = "g1";
 
 export function ProcessGallery() {
   const items = gallery as GalleryItem[];
-  const canHover = useCanHover();
-
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [scrollProgress, setScrollProgress] = useState(0);
-
-  const trackRef = useRef<HTMLDivElement>(null);
-  const dragState = useRef({ startX: 0, startScroll: 0, moved: false });
-
-  const updateScrollProgress = useCallback(() => {
-    const track = trackRef.current;
-    if (!track) return;
-    const max = track.scrollWidth - track.clientWidth;
-    setScrollProgress(max > 0 ? track.scrollLeft / max : 0);
-  }, []);
-
-  // Mirrors of state read inside the autoplay interval so the timer never
-  // needs to be torn down and rebuilt every time hover/drag state changes.
-  const isDraggingRef = useRef(false);
-  const hoveredIndexRef = useRef<number | null>(null);
-  const activeIndexRef = useRef<number | null>(null);
-  isDraggingRef.current = isDragging;
-  hoveredIndexRef.current = hoveredIndex;
-  activeIndexRef.current = activeIndex;
-
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-    const id = window.setInterval(() => {
-      if (isDraggingRef.current || hoveredIndexRef.current !== null || activeIndexRef.current !== null) return;
-      const firstItem = track.firstElementChild as HTMLElement | null;
-      const step = firstItem?.getBoundingClientRect().width || track.clientWidth;
-      const maxScroll = track.scrollWidth - track.clientWidth;
-      const next = track.scrollLeft + step;
-      track.scrollTo({ left: next >= maxScroll - 2 ? 0 : next, behavior: "smooth" });
-    }, AUTOPLAY_INTERVAL);
-    return () => window.clearInterval(id);
-  }, []);
-
-  useEffect(() => {
-    updateScrollProgress();
-    window.addEventListener("resize", updateScrollProgress);
-    return () => window.removeEventListener("resize", updateScrollProgress);
-  }, [updateScrollProgress]);
-
-  // Window-level listeners (not setPointerCapture) so a plain click still fires
-  // natively on the pressed button - capturing on the track redirects the
-  // resulting click event to the capturing element instead of the button.
-  const onWindowPointerMove = useCallback((e: PointerEvent) => {
-    const track = trackRef.current;
-    if (!track) return;
-    const dx = e.clientX - dragState.current.startX;
-    if (Math.abs(dx) > DRAG_THRESHOLD) dragState.current.moved = true;
-    track.scrollLeft = dragState.current.startScroll - dx;
-  }, []);
-  const onWindowPointerUp = useCallback(() => {
-    window.removeEventListener("pointermove", onWindowPointerMove);
-    setIsDragging(false);
-  }, [onWindowPointerMove]);
-
-  function onTrackPointerDown(e: ReactPointerEvent<HTMLDivElement>) {
-    const track = trackRef.current;
-    if (!track) return;
-    dragState.current = { startX: e.clientX, startScroll: track.scrollLeft, moved: false };
-    setIsDragging(true);
-    window.addEventListener("pointermove", onWindowPointerMove);
-    window.addEventListener("pointerup", onWindowPointerUp, { once: true });
-  }
-
-  function handleOpen(index: number) {
-    if (dragState.current.moved) return;
-    setActiveIndex(index);
-  }
-
-  useEffect(() => {
-    return () => {
-      window.removeEventListener("pointermove", onWindowPointerMove);
-      window.removeEventListener("pointerup", onWindowPointerUp);
-    };
-  }, [onWindowPointerMove, onWindowPointerUp]);
-
-  const activeDotIndex = Math.round(scrollProgress * (items.length - 1));
 
   return (
-    <section className="overflow-hidden bg-surface py-20 sm:py-28">
+    <section className="bg-surface py-20 sm:py-28">
       <Container>
         <SectionTitle
           eyebrow="Inside The Process"
           title="A Look Inside Our Facility"
-          description="From inspection to shredding - a transparent view into how your vehicle is recovered and recycled. Drag to explore."
+          description="From inspection to shredding - a transparent view into how your vehicle is recovered and recycled."
         />
-      </Container>
 
-      <div className="relative mt-14">
-        <div
-          ref={trackRef}
-          onPointerDown={onTrackPointerDown}
-          onScroll={updateScrollProgress}
-          className={cnJoin(
-            "no-scrollbar flex touch-pan-x snap-x snap-proximity gap-5 overflow-x-auto px-5 pb-2 sm:gap-6 sm:px-6 lg:snap-none lg:px-8",
-            isDragging ? "cursor-grabbing select-none" : "cursor-grab"
-          )}
-        >
+        <RevealGroup className="mt-14 grid auto-rows-[210px] grid-cols-2 gap-4 sm:auto-rows-[260px] sm:grid-cols-3 sm:gap-5 lg:auto-rows-[300px] lg:gap-6">
           {items.map((item, index) => {
-            const isHovered = canHover && hoveredIndex === index;
-
+            const isFeatured = item.id === FEATURED_ID;
             return (
-              <button
+              <RevealItem
                 key={item.id}
-                type="button"
-                onMouseEnter={() => canHover && setHoveredIndex(index)}
-                onMouseLeave={() => canHover && setHoveredIndex(null)}
-                onClick={() => handleOpen(index)}
-                className="group relative aspect-[3/2] w-[78vw] max-w-[320px] shrink-0 snap-center overflow-hidden rounded-2xl border border-border bg-ink-100 shadow-[var(--shadow-premium)] outline-none transition-[transform,box-shadow] duration-300 ease-[var(--ease-premium)] focus-visible:-translate-y-1 focus-visible:shadow-[var(--shadow-premium-lg)] focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface sm:w-[380px] lg:w-[440px]"
+                direction="scale"
+                className={isFeatured ? "col-span-2" : undefined}
               >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  fill
-                  draggable={false}
-                  sizes="(min-width: 1024px) 440px, (min-width: 640px) 380px, 78vw"
-                  className="pointer-events-none object-cover transition-transform duration-700 ease-[var(--ease-premium)] group-hover:scale-[1.06]"
-                />
-                <div
-                  className={cnJoin(
-                    "absolute inset-0 bg-ink-950/0 transition-colors duration-300",
-                    isHovered && "bg-ink-950/40"
-                  )}
-                />
-                <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-primary-700 shadow-sm backdrop-blur-sm">
-                  {item.category}
-                </span>
-                <span className="absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full bg-ink-950/40 font-mono text-[11px] font-semibold text-white backdrop-blur-sm">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span
-                  className={cnJoin(
-                    "absolute inset-0 flex scale-75 items-center justify-center text-white opacity-0 transition-all duration-300",
-                    isHovered && "scale-100 opacity-100"
-                  )}
+                <button
+                  type="button"
+                  onClick={() => setActiveIndex(index)}
+                  className="group relative block h-full w-full overflow-hidden rounded-2xl border border-border bg-ink-100 text-left shadow-[var(--shadow-premium)] outline-none transition-[transform,box-shadow] duration-300 ease-[var(--ease-premium)] hover:-translate-y-1 hover:shadow-[var(--shadow-premium-lg)] focus-visible:-translate-y-1 focus-visible:shadow-[var(--shadow-premium-lg)] focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
                 >
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 backdrop-blur">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes={
+                      isFeatured
+                        ? "(min-width: 1024px) 860px, (min-width: 640px) 660px, 100vw"
+                        : "(min-width: 1024px) 420px, (min-width: 640px) 320px, 50vw"
+                    }
+                    className="object-cover transition-transform duration-700 ease-[var(--ease-premium)] group-hover:scale-[1.08]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink-950/85 via-ink-950/10 to-transparent opacity-80 transition-opacity duration-300 group-hover:opacity-95" />
+                  <span className="absolute left-3 top-3 rounded-full bg-white/90 px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.08em] text-primary-700 shadow-sm backdrop-blur-sm">
+                    {item.category}
+                  </span>
+                  <span className="absolute right-3 top-3 flex h-9 w-9 scale-75 items-center justify-center rounded-full bg-white/15 text-white opacity-0 backdrop-blur transition-all duration-300 group-hover:scale-100 group-hover:opacity-100">
                     <Expand className="h-4 w-4" />
                   </span>
-                </span>
-                <p className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-ink-950/90 to-transparent px-4 pb-3.5 pt-10 text-left text-sm font-bold text-white sm:text-base">
-                  {item.title}
-                </p>
-              </button>
+                  <p
+                    className={cn(
+                      "absolute inset-x-0 bottom-0 px-4 pb-4 pt-10 font-bold text-white",
+                      isFeatured ? "text-lg sm:text-2xl" : "text-sm sm:text-base"
+                    )}
+                  >
+                    {item.title}
+                  </p>
+                </button>
+              </RevealItem>
             );
           })}
-        </div>
-
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-6 bg-gradient-to-r from-surface to-transparent sm:w-16 lg:w-24" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-6 bg-gradient-to-l from-surface to-transparent sm:w-16 lg:w-24" />
-      </div>
-
-      <Container>
-        <div className="mt-8 flex items-center gap-4">
-          <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-ink-900/10">
-            <div
-              style={{ width: `${Math.max(scrollProgress * 100, items.length > 1 ? 6 : 100)}%` }}
-              className="h-full rounded-full bg-gradient-to-r from-primary-600 to-primary-400 transition-[width] duration-150 ease-out"
-            />
-          </div>
-          <span className="shrink-0 font-mono text-xs font-semibold text-ink-400">
-            {String(activeDotIndex + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}
-          </span>
-        </div>
+        </RevealGroup>
       </Container>
 
       <AnimatePresence>
@@ -214,10 +93,6 @@ export function ProcessGallery() {
       </AnimatePresence>
     </section>
   );
-}
-
-function cnJoin(...parts: Array<string | false | null | undefined>) {
-  return parts.filter(Boolean).join(" ");
 }
 
 function FocusedGallery({
@@ -235,6 +110,8 @@ function FocusedGallery({
   const active = items[activeIndex];
   const dragState = useRef({ startX: 0, moved: false, dragging: false });
 
+  const hasPrev = activeIndex > 0;
+  const hasNext = activeIndex < items.length - 1;
   const goPrev = useCallback(() => onChangeIndex(Math.max(0, activeIndex - 1)), [activeIndex, onChangeIndex]);
   const goNext = useCallback(
     () => onChangeIndex(Math.min(items.length - 1, activeIndex + 1)),
@@ -256,7 +133,7 @@ function FocusedGallery({
   const onWindowPointerMove = useCallback((e: PointerEvent) => {
     if (!dragState.current.dragging) return;
     const dx = e.clientX - dragState.current.startX;
-    if (Math.abs(dx) > DRAG_THRESHOLD) dragState.current.moved = true;
+    if (Math.abs(dx) > 6) dragState.current.moved = true;
   }, []);
   const onWindowPointerUp = useCallback(
     (e: PointerEvent) => {
@@ -264,8 +141,8 @@ function FocusedGallery({
       dragState.current.dragging = false;
       window.removeEventListener("pointermove", onWindowPointerMove);
       const dx = e.clientX - dragState.current.startX;
-      if (dx > FOCUS_SWIPE_THRESHOLD) goPrev();
-      else if (dx < -FOCUS_SWIPE_THRESHOLD) goNext();
+      if (dx > SWIPE_THRESHOLD) goPrev();
+      else if (dx < -SWIPE_THRESHOLD) goNext();
     },
     [onWindowPointerMove, goPrev, goNext]
   );
@@ -303,6 +180,33 @@ function FocusedGallery({
       >
         <X className="h-5 w-5" />
       </button>
+
+      {hasPrev && (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            goPrev();
+          }}
+          aria-label="Previous image"
+          className="absolute left-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur transition-colors hover:bg-accent-500 hover:text-ink-950 sm:left-5"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+      )}
+      {hasNext && (
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            goNext();
+          }}
+          aria-label="Next image"
+          className="absolute right-2 top-1/2 z-10 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur transition-colors hover:bg-accent-500 hover:text-ink-950 sm:right-5"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+      )}
 
       <div
         className="relative flex max-h-full w-full flex-1 touch-pan-y items-center justify-center"

@@ -21,6 +21,7 @@ export default function BlogPage() {
         breadcrumb="Blog"
         title="Vehicle Recycling Insights & Updates"
         description="Practical guides, policy explainers, and environmental deep-dives from our team."
+        backgroundImage="/images/blog/hero.png"
       />
 
       <section className="bg-surface py-20 sm:py-28">
