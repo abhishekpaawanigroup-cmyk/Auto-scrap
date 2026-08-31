@@ -72,6 +72,7 @@ export default function TermsPage() {
         breadcrumb="Terms & Conditions"
         title="Terms & Conditions"
         description="Last updated: January 1, 2026"
+        backgroundImage="/images/banners/t&c.png"
       />
       <section className="bg-surface py-20 sm:py-28">
         <Container className="max-w-3xl">

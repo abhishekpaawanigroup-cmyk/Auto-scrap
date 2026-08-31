@@ -46,7 +46,7 @@ export function ProcessGallery() {
                 <button
                   type="button"
                   onClick={() => setActiveIndex(index)}
-                  className="group relative block h-full w-full overflow-hidden rounded-2xl border border-border bg-ink-100 text-left shadow-[var(--shadow-premium)] outline-none transition-[transform,box-shadow] duration-300 ease-[var(--ease-premium)] hover:-translate-y-1 hover:shadow-[var(--shadow-premium-lg)] focus-visible:-translate-y-1 focus-visible:shadow-[var(--shadow-premium-lg)] focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
+                  className="group relative block h-full w-full overflow-hidden rounded-2xl border border-border bg-ink-100 text-left shadow-[var(--shadow-premium)] outline-none transition-[transform,box-shadow] duration-300 ease-[var(--ease-premium)] hover:shadow-[var(--shadow-premium-lg)] focus-visible:-translate-y-1 focus-visible:shadow-[var(--shadow-premium-lg)] focus-visible:ring-2 focus-visible:ring-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-surface"
                 >
                   <Image
                     src={item.image}

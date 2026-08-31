@@ -24,6 +24,7 @@ export default function ServicesPage() {
         breadcrumb="Services"
         title="End-to-End Vehicle Recovery Services"
         description="Beyond scrapping - complete documentation, compliance handling, and fleet-scale support, all under one roof."
+        backgroundImage="/images/banners/service.png"
       />
 
       <section className="bg-surface py-20 sm:py-28">

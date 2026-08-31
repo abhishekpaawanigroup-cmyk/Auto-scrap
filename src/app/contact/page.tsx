@@ -19,6 +19,7 @@ export default function ContactPage() {
         breadcrumb="Contact"
         title="We're Here to Help"
         description="Have a question about pricing, pickup, or documentation? Reach out - our team responds within one business day."
+        backgroundImage="/images/banners/contact.png"
       />
 
       <ContactSection />

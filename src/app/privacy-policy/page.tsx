@@ -204,6 +204,7 @@ export default function PrivacyPolicyPage() {
         breadcrumb="Privacy Policy"
         title="Privacy Policy"
         description="Last updated: August 27, 2026"
+        backgroundImage="/images/banners/privacy.png"
       />
       <section className="bg-surface py-20 sm:py-28">
         <Container className="max-w-3xl">
