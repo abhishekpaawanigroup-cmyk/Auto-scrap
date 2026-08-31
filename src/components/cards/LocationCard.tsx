@@ -13,7 +13,7 @@ export function LocationCard({ location }: { location: ServiceLocation }) {
         className="bg-pattern-diagonal pointer-events-none absolute inset-0 origin-left scale-x-0 opacity-0 transition-[transform,opacity] duration-500 ease-[var(--ease-premium)] group-hover:scale-x-100 group-hover:opacity-100 group-active:scale-x-100 group-active:opacity-100"
         aria-hidden
       />
-
+      
       <div className="relative z-10 flex h-full flex-col">
         <div className="flex items-start justify-between gap-3">
           <MapPin

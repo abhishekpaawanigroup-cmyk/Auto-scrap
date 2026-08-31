@@ -7,7 +7,7 @@ import type { FAQ } from "@/types";
 
 export function FAQSection() {
   return (
-    <section className="bg-surface py-8 sm:py-28">
+    <section className="bg-surface pb-20 pt-8 sm:pb-28 sm:pt-12">
       <Container className="max-w-3xl">
         <SectionTitle
           eyebrow="Frequently Asked"
